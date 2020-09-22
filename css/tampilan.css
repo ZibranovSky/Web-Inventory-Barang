@@ -1,0 +1,127 @@
+body {
+  font-family: Arial, sans-serif;
+}
+p {
+  font-size: 15px;
+}
+h1 {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+hr.star-primary {
+  padding: 0;
+  border: none;
+  border-top: solid 5px;
+  max-width: 250px;
+  margin: 10px auto 30px;
+}
+
+.navbar-custom {
+  background: #BDBFC1;
+  font-family: Arial;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: none;
+}
+.navbar-custom .navbar-brand {
+  color: black;
+}
+.navbar-custom:hover,
+.navbar-custom:focus,
+.navbar-custom:active,
+.navbar-custom.active {
+  color: white;
+}
+.navbar-custom .navbar-nav {
+  letter-spacing: 1px;
+}
+.navbar-custom .navbar-nav li a {
+  color: black;
+}
+.navbar-custom .navbar-nav li a:hover {
+  color: white;
+}
+.navbar-custom .navbar-nav li a:focus,
+.navbar-custom .navbar-nav li a:active {
+  color: white;
+}
+.navbar-custom .navbar-nav li.active a {
+  color: white;
+  background: green;
+}
+.navbar-custom .navbar-nav li.active a:hover,
+.navbar-custom .navbar-nav li.active a:focus,
+.navbar-custom .navbar-nav li.active a:active {
+  color: white;
+  background: yellow;
+}
+.navbar-custom .navbar-toggle {
+  color: white;
+  text-transform: uppercase;
+  font-size: 10px;
+  border-color: white;
+}
+.navbar-custom .navbar-toggle:hover,
+.navbar-custom .navbar-toggle:focus {
+  background-color: #E6E7E8;
+  color: white;
+  border-color: #E6E7E8;
+}
+@media (min-width: 768px) {
+  .navbar-custom {
+    padding: 10px 0;
+    -webkit-transition: padding 0.3s;
+    -moz-transition: padding 0.3s;
+    transition: padding 0.3s;
+  }
+  .navbar-custom .navbar-brand {
+    font-size: 2em;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .navbar-custom.affix {
+    padding: 10px 0;
+  }
+  .navbar-custom.affix .navbar-brand {
+    font-size: 1.5em;
+  }
+}
+
+section {
+  padding: 30px 0;
+  color: black;
+}
+section.bagian1 {
+  padding-top: 80px;
+  background: #E6E7E8;
+}
+section.bagian2 {
+  background: #D2D3D5;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+section.bagian3 {
+  background: #E6E7E8;
+  padding-top: 100px;
+}
+@media (max-width: 767px) {
+  section {
+    padding: 100px 0;
+  }
+}
+
+footer {
+  color: black;
+  font-size: 15px;
+}
+footer .footer-above {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #BDBFC1;
+}
+footer .footer-below {
+  padding: 20px 0;
+  background-color: #A9ABAE;
+}
