@@ -59,4 +59,5 @@ Tetapi jika anda berkenan, silahkan donasi :
 1. Paypal = https://paypal.me/Zeppy19?locale.x=id_ID
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 Jika ada bagian yang error atau yang ada ingin ditambahkan mohon hubungi :
-1. Whatsapp = 0895635729348
+1. Whatsapp = 0895635729348<br>
+<strong> Harap Jangan mengubah copyright yang ada di footer website</strong>
