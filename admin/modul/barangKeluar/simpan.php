@@ -15,6 +15,13 @@ if (isset($_POST['simpan'])) {
 	$admin = $_POST['admin'];
 	
 
+	$sql_cek = mysqli_query($koneksi, "SELECT * FROM tb_barang_out WHERE no_brg_out = '$no_brg_out'");
+	$cek = mysqli_fetch_row($sql_cek);
+
+	if ($cek) {
+		echo "<script>alert('No barang Keluar sudah ada')</script>";
+		echo '<script>window.history.back()</script>';
+	}else {
 	$kurangStok 	= $stok - $jml_keluar;
 
 	$update = ("UPDATE tb_barang SET stok = '". $kurangStok ."' WHERE kode_brg = '". $kode_brg ."' ");
@@ -26,9 +33,14 @@ if (isset($_POST['simpan'])) {
 	$sqlval = "UPDATE tb_ajuan SET val='0', stok='" . $kurangStok . "' WHERE no_ajuan = '". $no_ajuan ."' ";
 
 	if (mysqli_query($koneksi, $sqlval)) {
-		header("location: ?m=barangKeluar&s=awal");	}else{
+		header("location: ?m=barangKeluar&s=awal");	
+	
+	}else{
 		echo "Penyimpanan data Gagal";
 	}
+	}
+
+	
 }
 
 

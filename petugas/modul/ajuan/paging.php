@@ -34,10 +34,24 @@ while ($row=mysqli_fetch_array($data_brg_in)) {
                                                 <td><?php echo $row['tanggal']; ?></td>
                                                  <td><?php echo $row['kode_brg']; ?></td>
                                                 <td><?php echo $row['nama_brg']; ?></td>
-                                                 <td><?php echo $row['stok']; ?></td>
                                                 <td><?php echo $row['jml_ajuan']; ?></td>
                                                 <td><?php echo $row['petugas']; ?></td>
-                                                <td><?php echo $row['val']; ?></td>
+                                                <td>
+
+                                                <?php
+                                                    if ($row['val']==1) {
+                                                        
+                                                ?>
+                                                <span class="badge badge-pill badge-primary">Proses</span>
+                                            <?php 
+                                                }else{
+                                             ?>
+                                                    <span class="badge badge-pill badge-success">Stok Berhasil Dikeluarkan</span>
+
+                                                <?php } ?>
+
+                                                
+                                            </td>
                                               
                                               
 

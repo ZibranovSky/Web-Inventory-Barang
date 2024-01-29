@@ -12,21 +12,30 @@ if(isset($_POST['simpan'])) {
 	$jam		= $_POST['jam'];
 	$petugas		= $_POST['petugas'];
 
+	$sql_cek = mysqli_query($koneksi, "SELECT * FROM tb_barang_in WHERE noinv='$noinv'");
+	$cek = mysqli_fetch_row($sql_cek);
 
-	$tambahStok 	= $stok + $jml_masuk;
+	if ($cek) {
+		echo "<script>alert('No Invoice sudah ada')</script>";
+		echo '<script>window.history.back()</script>';
+	}else {
+		$tambahStok 	= $stok + $jml_masuk;
 
-	$update = ("UPDATE tb_barang SET stok = '". $tambahStok ."' WHERE kode_brg = '". $kode_brg ."' ");
-	$result = mysqli_query($koneksi, $update) or die(mysql_error());
-
-	$sql = "INSERT INTO tb_barang_in SET tanggal='$tanggal', noinv='$noinv', supplier='$supplier', kode_brg='$kode_brg', nama_brg='$nama_brg', stok='$stok', jml_masuk='$jml_masuk', jam='$jam', petugas='$petugas'";
-	mysqli_query($koneksi, $sql);
-	if($sql){
-		 //echo '<script>window.history.back()</script>';
-		header("location: ?m=barangMasuk&s=awal");
-	}else{
-		var_dump($sql);
-		echo "gagal";
+		$update = ("UPDATE tb_barang SET stok = '". $tambahStok ."' WHERE kode_brg = '". $kode_brg ."' ");
+		$result = mysqli_query($koneksi, $update) or die(mysql_error());
+	
+		$sql = "INSERT INTO tb_barang_in SET tanggal='$tanggal', noinv='$noinv', supplier='$supplier', kode_brg='$kode_brg', nama_brg='$nama_brg', stok='$stok', jml_masuk='$jml_masuk', jam='$jam', petugas='$petugas'";
+		mysqli_query($koneksi, $sql);
+		if($sql){
+			 //echo '<script>window.history.back()</script>';
+			header("location: ?m=barangMasuk&s=awal");
+		}else{
+			var_dump($sql);
+			echo "gagal";
+		}
 	}
+
+	
 }
 
 

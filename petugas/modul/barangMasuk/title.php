@@ -125,31 +125,7 @@
     <input type="text" class="form-control" id="exampleInputEmail1" name="noinv" aria-describedby="emailHelp" placeholder="Masukkan Nomor Invoice">
     <small id="emailHelp" class="form-text text-muted">Masukkan Nomor Invoice</small>
   </div>
-          <div class="form-group">
-    <label for="exampleInputEmail1">Supplier</label>
-    <select class="form-control" name="supplier" required="">
-   <?php 
-
-    include '../koneksi.php';
-
-    $sql = "SELECT * FROM tb_sup";
-
-    $hasil = mysqli_query($koneksi, $sql);
-
-                                                
-
-    while ($data = mysqli_fetch_array($hasil)) {
-                                                    
-                                                
-                                                
-
-      ?>
-   
-      <option value="<?php echo $data['nama_sup'];?>"><?php echo $data['nama_sup']; ?></option>
-      <?php } ?>
-                                                   
-      </select>
-  </div>
+     
           <div class="form-group">
     <label for="exampleInputEmail1">Kode Barang</label>
     
@@ -188,6 +164,12 @@
           <div class="form-group">
     <label for="exampleInputEmail1">Nama Barang</label>
     <input type="text" name="nama_brg" readonly="" id="prd_nmbrg" size="67">
+
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Supplier</label>
+    <input type="text" class="form-control" id="prd_sup" name="supplier" aria-describedby="emailHelp">
 
   </div>
           <div class="form-group">
@@ -236,7 +218,6 @@
                                  <th>Supplier</th>
                                  <th>Kode Barang</th>
                                  <th>Nama Barang</th>
-                                 <th>Stok</th>
                                  <th>Jumlah Masuk</th>
                                  <th>Jam</th>
                                  <th>Petugas</th>

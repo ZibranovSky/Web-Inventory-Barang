@@ -205,10 +205,9 @@
                                  <th>Tanggal</th>
                                  <th>Kode Barang</th>
                                  <th>Nama Barang</th>
-                                 <th>Stok</th>
                                  <th>Jumlah Ajuan</th>
                                  <th>petugas</th>
-                                 <th>Val</th>
+                                 <th>Validasi</th>
                                 
 
                                 

@@ -36,7 +36,6 @@ while ($row=mysqli_fetch_array($data_brg_in)) {
                                                 <td><?php echo $row['supplier']; ?></td>
                                                  <td><?php echo $row['kode_brg']; ?></td>
                                                 <td><?php echo $row['nama_brg']; ?></td>
-                                                 <td><?php echo $row['stok']; ?></td>
                                                 <td><?php echo $row['jml_masuk']; ?></td>
                                                  <td><?php echo $row['jam']; ?></td>
                                                 <td><?php echo $row['petugas']; ?></td>
