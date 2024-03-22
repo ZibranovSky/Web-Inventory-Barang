@@ -54,9 +54,9 @@ Website inventory adalah aplikasi berbasis Web untuk mengatur dan mencatat kelua
 -> Catatan(PENTING) :
     <i>Sebelum mengimport database, pastikan anda membuat database sesuai dengan nama database yang ada di dalam folder DATABASE, yaitu 'inventory'</i>
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
-Aplikasi ini adalah aplikasi open source, anda bisa menggunakan aplikasi saya ini untuk apapun. 
-Tetapi jika anda berkenan, silahkan donasi :
-1. Paypal = https://paypal.me/Zeppy19?locale.x=id_ID
+Jika ada bagian yang error atau yang ada ingin ditambahkan mohon hubungi :
+
+Discord : royal_fortune19
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 Jika ada bagian yang error atau yang ada ingin ditambahkan mohon hubungi :
 1. Discord = @royal_fortune19 <br>
