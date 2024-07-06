@@ -99,7 +99,7 @@
                 </form>
 -->
           <form class="sign-in-form" action="pro_login_petugas.php" method="post">
-            <h2 class="title">Sign In</h2>
+            <h2 class="title">Login</h2>
             <div class="form-group input-group">
                     <span class="input-group-addon"><i class="fa fa-laptop"></i></span>
                     <input class="form-control" type="text" name="user" required="" placeholder="Masukkan username Anda">
@@ -111,21 +111,7 @@
                   </div>
             <input type="submit" value="Masuk" name="daftar" class="btn solid" />
             
-            <p class="social-text">Or Sign in with social platforms</p>
-            <div class="social-media">
-              <a href="#" class="social-icon">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-google"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-            </div>
+           
           </form>
 
 
@@ -149,21 +135,7 @@
             </div>
             <input type="submit" value="Sign Up" class="btn solid" />
 
-            <p class="social-text">Or Sign up with social platforms</p>
-            <div class="social-media">
-              <a href="#" class="social-icon">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-google"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-            </div>
+          
           </form>
         </div>
       </div>
@@ -172,7 +144,7 @@
         <div class="panel left-panel">
             <div class="content">
                 <h3>New here?</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio minus natus est.</p>
+                <p>Belum punya akun?Daftar disini untuk memulai!</p>
                 <button class="btn transparent" id="sign-up-btn">Sign Up</button>
             </div>
             <img src="./img/log.svg" class="image" alt="">
@@ -181,8 +153,8 @@
         <div class="panel right-panel">
             <div class="content">
                 <h3>One of us?</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio minus natus est.</p>
-                <button class="btn transparent" id="sign-in-btn">Sign In</button>
+                <p>Anda sudah memiliki akun?Login dengan klik disini!.</p>
+                <button class="btn transparent" id="sign-in-btn">Login</button>
             </div>
             <img src="./img/register.svg" class="image" alt="">
         </div>

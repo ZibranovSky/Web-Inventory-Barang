@@ -88,7 +88,7 @@
 
             <p class="hero-text">
               Tak akan ada lagi yang berantakan!
-              Di desain khusus untuk anda Memiliki fitur fitur yang akan membantu anda dalam manajemen inventori!
+              Di desain khusus untuk anda. Memiliki fitur fitur yang akan membantu anda dalam manajemen inventori!
             </p>
             <p class="hero-text">
              Mulai dengan klik dibawah ini
