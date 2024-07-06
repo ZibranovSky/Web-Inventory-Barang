@@ -94,8 +94,10 @@
             <p class="hero-text">
               Tak akan ada lagi yang berantakan!
             </p>
-
-            <button class="btn btn-primary">Get started</button>
+            <p class="hero-text">
+              Belum punya akun?Daftar disini
+            </p>
+            <button class="btn btn-primary">Register</button>
 
           </div>
 
