@@ -97,7 +97,12 @@
             <p class="hero-text">
               Belum punya akun?Daftar disini
             </p>
-            <button class="btn btn-primary">Register</button>
+
+            <div class="form-group">
+                    <a href="../petugas/login_petugas.php">
+                    <button class="btn btn-primary">Login</button>
+                    </a>
+</div>
 
           </div>
 
