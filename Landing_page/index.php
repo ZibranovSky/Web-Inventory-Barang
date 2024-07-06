@@ -95,7 +95,7 @@
             </p>
 
             <div class="form-group">
-                    <a href="../petugas/registerpetugas.php">
+                    <a href="../petugas/sign.php">
                     <button class="btn btn-primary">Get Started!</button>
                     </a>
 </div>
