@@ -58,8 +58,11 @@
               <a href="#features" class="nav-link">Why us?</a>
             </li>
           </ul>
-
-          <button class="btn btn-primary">Get in touch</button>
+          <div class="form-group">
+                    <a href="../petugas/login_petugas.php">
+                    <button class="btn btn-primary">Login</button>
+                    </a>
+</div>
 
         </nav>
 
