@@ -48,13 +48,13 @@
                     <div class="input-group mb-3">
                         <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
                         <div class="input-group-text">
-                            <span class="bi bi-envelope"></span>
+                            <span class="bi bi-key-fill"></span>
                         </div>
                     </div>
                     <div class="input-group mb-3">
                         <input type="text" id="nama" name="nama" class="form-control" placeholder="Nama" required>
                         <div class="input-group-text">
-                            <span class="bi bi-lock-fill"></span>
+                            <span class="bi bi-person-bounding-box"></span>
                         </div>
                     </div>
                     <div class="input-group mb-3">
