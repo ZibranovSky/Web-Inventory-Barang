@@ -3,7 +3,7 @@
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
-    $password = $_POST['password'];
+    $password = md5($_POST['password']);
     $nama = $_POST['nama'];
     $telepon = $_POST['telepon'];
     $foto = $_POST['foto'];
