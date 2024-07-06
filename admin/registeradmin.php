@@ -42,7 +42,7 @@
                     <div class="input-group mb-3">
                         <input type="text" id="username" name="username" class="form-control" placeholder="Username" required>
                         <div class="input-group-text">
-                            <span class="bi bi-person"></span>
+                            <span class="bi bi-person-circle"></span>
                         </div>
                     </div>
                     <div class="input-group mb-3">
