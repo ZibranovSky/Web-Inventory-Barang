@@ -207,9 +207,12 @@
               <p class="section-text">
               Anda admin dari web ini?silahkan login dibawah ini
               </p>
-
-              <button class="btn btn-secondary">Login For Admin</button>
-
+              <div class="form-group">
+                    <a href="../admin/login.php">
+                    <button class="btn btn-secondary">Login For Admin</button>
+                    </a>
+</div>
+             
             </div>
 
           </div>
