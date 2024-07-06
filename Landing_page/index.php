@@ -58,12 +58,7 @@
               <a href="#features" class="nav-link">Why us?</a>
             </li>
           </ul>
-          <div class="form-group">
-                    <a href="../petugas/login_petugas.php">
-                    <button class="btn btn-primary">Login</button>
-                    </a>
-</div>
-
+        
         </nav>
 
       </div>
@@ -93,14 +88,15 @@
 
             <p class="hero-text">
               Tak akan ada lagi yang berantakan!
+              Di desain khusus untuk anda Memiliki fitur fitur yang akan membantu anda dalam manajemen inventori!
             </p>
             <p class="hero-text">
-              Belum punya akun?Daftar dibawah ini!
+             Mulai dengan klik dibawah ini
             </p>
 
             <div class="form-group">
                     <a href="../petugas/registerpetugas.php">
-                    <button class="btn btn-primary">Register</button>
+                    <button class="btn btn-primary">Get Started!</button>
                     </a>
 </div>
 
@@ -199,9 +195,9 @@
               <h2 class="h2 section-title">We’re Here To Help You!</h2>
 
               <p class="section-text">
-               Kami tau, bahwa tidak semua orang bisa menyusun barangnya dengan baik, maka dari itu kami hadir
-               menyediakan layanan yang sangat mudah digunakan, sehingga anda tidak perlu khawatir 
-               lagi terkait masalah penyimpanan.
+               Kami tahu, bahwa tidak semua orang punya waktu untuk menyusun barangnya dengan baik,
+               maka dari itu kami hadirmenyediakan layanan yang sangat mudah digunakan,
+               sehingga anda tidak perlu khawatir lagi terkait masalah penyimpanan.
               </p>
 
               <p class="section-text">
