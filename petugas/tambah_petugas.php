@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (mysqli_query($koneksi, $query)) {
         echo "<script>
                 alert('Data Berhasil Ditambahkan');
-                window.location.href='login_petugas.php';
+                window.location.href='sign.php';
               </script>";
     } else {
         echo "Error: " . $query . "<br>" . mysqli_error($koneksi);

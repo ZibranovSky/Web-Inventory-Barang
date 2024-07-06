@@ -129,19 +129,23 @@
           </form>
 
 
-          <form action="" class="sign-up-form">
+          <form action="tambah_petugas.php" class="sign-up-form" method="post">
             <h2 class="title">Sign Up</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
+              <input type="text" placeholder="Username" id="username" name="username" />
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" />
+              <input type="password" placeholder="Password" id="password" name="password" />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              <input type="text" placeholder="Nama" id="nama" name="nama"/>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="number" placeholder="telepon" id="telepon" name="telepon"/>
             </div>
             <input type="submit" value="Sign Up" class="btn solid" />
 
