@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Login Admi</title>
+    <title>Login Admin</title>
 
     <!-- boootstrap -->
     <link href="../vendor/css/bootstrap/bootstrap.min.css" rel="stylesheet">
