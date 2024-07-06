@@ -99,7 +99,7 @@
             </p>
 
             <div class="form-group">
-                    <a href="../petugas/login_petugas.php">
+                    <a href="../petugas/registerpetugas.php">
                     <button class="btn btn-primary">Login</button>
                     </a>
 </div>
