@@ -63,7 +63,13 @@
                             <span class="bi bi-telephone"></span>
                         </div>
                         </div>
-                      
+                        <div class="input-group mb-3">
+                        <label for="foto">Silahkan Upload Foto Anda</label>
+                        <div>
+                        <input type="file" id="foto" name="foto" class="form-control" placeholder="" required>
+                
+                        </div>
+                    </div>
                     </div>
                     <!--begin::Row-->
                     <div class="row">
@@ -78,6 +84,7 @@
                                 <button type="submit" class="btn btn-primary">Sign Up</button>
                             </div>
                         </div>
+
                         <!-- /.col -->
                     </div>
                     <!--end::Row-->
