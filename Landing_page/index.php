@@ -95,12 +95,12 @@
               Tak akan ada lagi yang berantakan!
             </p>
             <p class="hero-text">
-              Belum punya akun?Daftar disini
+              Belum punya akun?Daftar dibawah ini!
             </p>
 
             <div class="form-group">
                     <a href="../petugas/registerpetugas.php">
-                    <button class="btn btn-primary">Login</button>
+                    <button class="btn btn-primary">Register</button>
                     </a>
 </div>
 
@@ -204,7 +204,11 @@
                lagi terkait masalah penyimpanan.
               </p>
 
-              <button class="btn btn-secondary">Sign Up For Free</button>
+              <p class="section-text">
+              Anda admin dari web ini?silahkan login dibawah ini
+              </p>
+
+              <button class="btn btn-secondary">Login For Admin</button>
 
             </div>
 
