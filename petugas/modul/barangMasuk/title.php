@@ -26,16 +26,16 @@ $jamSekarang = date("h:i a");
 
     <style>
         .btn-primary {
-  margin-bottom: 10px; /* Tambahkan margin di bagian bawah tombol tambah data */ 
-  background-color: #228B22;   
-}
-.btn-primary:hover,
-.btn-primary:active,
-.btn-primary:focus {
-background-color: #FFD700; /* Yellow color */
-border-color: #708090; /* Match border color to background color */
-color: #212529; /* Text color */
-}
+            margin-bottom: 10px; /* Tambahkan margin di bagian bawah tombol tambah data */ 
+            background-color: #228B22;   
+        }
+        .btn-primary:hover,
+        .btn-primary:active,
+        .btn-primary:focus {
+        background-color: #FFD700; /* Yellow color */
+        border-color: #708090; /* Match border color to background color */
+        color: #212529; /* Text color */
+        }
         .pagination .page-item .page-link {
             color: #007bff;
         }
@@ -47,14 +47,12 @@ color: #212529; /* Text color */
 </head>
 <body>
     <!-- Menu -->
-    <div id="wrapper">
-   
+    <div id="wrapper">  
             <!-- Horizontal sidebar -->
             <?php
                  include("sidebar.php")
             ?>
         </nav>
-
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
@@ -195,15 +193,12 @@ color: #212529; /* Text color */
             </div>
         </div>
     </div>
-
     <!-- Footer -->
    <?php
    include('footer.php');
    ?>
-
     <!-- jQuery -->
     <script src="../vendor/jquery/jquery.min.js"></script>
-
     <!-- Bootstrap JS -->
     <script src="../vendor/css/js/bootstrap.min.js"></script>
 </body>
