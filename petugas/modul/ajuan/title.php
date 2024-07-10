@@ -38,20 +38,7 @@
             $r = mysqli_fetch_array($query);
 
            ?>
-            <ul class="nav navbar-top-links navbar-right">
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-             </i> <?php echo $r['nama']; ?>
-              </a>
-              <ul class="dropdown-menu dropdown-user">
-                <li>
-                  <form class="" action="logout.php" onclick="return confirm('yakin ingin logout?');" method="post">
-                    <button class="btn btn-default" type="submit" name="keluar"><i class="fa fa-sign-out"></i> Keluar</button>
-                  </form>
-                </li>
-              </ul>
-            </li>
-          </ul>
+            
 
         <!-- menu samping -->
         <?php
