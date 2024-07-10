@@ -32,9 +32,7 @@ background-color: #FFD700; /* Yellow color */
 border-color: #708090; /* Match border color to background color */
 color: #212529; /* Text color */
 }
-
-    </style>
-  
+    </style> 
 </head>
 <body>
 <!-- Menu -->
@@ -162,9 +160,6 @@ color: #212529; /* Text color */
                         <th>Jumlah Ajuan</th>
                         <th>petugas</th>
                         <th>Validasi</th>
-
-
-
                         <th>Aksi</th>
 
                     </tr>
@@ -198,26 +193,13 @@ color: #212529; /* Text color */
 
     </div>
 </div>
-
-
 <!-- Footer -->
-<footer class="text-center">
-    <div class="footer-below">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <p class="text-muted" style="font-size: 16px;">Copyright &copy; <script>document.write(new Date().getFullYear());</script> Muhamad Zibran Fitadiyatama. All rights reserved</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-
+<?php
+include('footer.php');
+?>
 <!-- jQuery -->
 <script src="../vendor/jquery/jquery.min.js"></script>
-
 <!--include-->
 <script src="../vendor/css/js/bootstrap.min.js"></script>
-
 </body>
 </html>
