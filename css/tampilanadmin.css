@@ -1,12 +1,15 @@
-body {
-  font-family: Arial, sans-serif;
+html, body {
+  height: 100%;
 }
-p {
-  font-size: 15px;
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
-h1 {
-  text-transform: uppercase;
-  font-weight: 500;
+#page-wrapper {
+  flex: 1;
+  padding: 20px;
+  background: linear-gradient(to bottom right, #8A2BE2, #7FFFD4);
 }
 hr.star-light {
   padding: 0;
