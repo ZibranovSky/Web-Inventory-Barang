@@ -24,19 +24,30 @@
 
     <!-- tema css -->
     <link href="../css/tampilanadmin.css" rel="stylesheet">
+    <link href="../sidebar.css" rel="stylesheet">
 
   </head>
+  <style>
+    .btn-primary {
+    margin-bottom: 20px; /* Tambahkan margin di bagian bawah tombol tambah data */
+}
+.pagination {
+            margin: 20px 0;
+            justify-content: center;
+        }
+        .pagination .page-item .page-link {
+            color: #007bff;
+        }
+        .pagination .page-item.active .page-link {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+  </style>
   <body>
     <!-- Menu -->
     <div id="wrapper">
 
-      <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">navigation</span> Menu <i class="fa fa-bars"></i>
-            </button>
-            <a class="navbar-brand">Inventory</a>
-          </div>
+     
           <?php 
           $id = $_SESSION['idinv2'];
            include '../koneksi.php';
@@ -61,34 +72,9 @@
           </ul>
 
         <!-- menu samping -->
-         <div class="navbar-default sidebar" role="navigation">
-          <div class="sidebar-nav navbar-collapse">
-            <ul class="nav" id="side-menu">
-              <li>
-                <a href="?m=awal.php">
-                  <i class="fa fa-dashboard"></i> Beranda
-                </a>
-              </li>
-              <li>
-                <a href="?m=barangMasuk&s=awal">
-                  <i class="fa fa-cart-arrow-down"></i> Data Barang Masuk
-                </a>
-              </li>
-                            
-                            <li>
-                <a href="?m=ajuan&s=awal">
-                  <i class="fa fa-gift"></i> Data Ajuan
-                </a>
-              </li>
-              <li>
-                <a href="logout.php" onclick="return confirm('yakin ingin logout?');">
-                  <i class="fa fa-warning"></i> Logout
-                </a>
-              </li>
-              
-            </ul>
-          </div>
-        </div>
+        <?php
+       include('sidebar.php');
+       ?>
       </nav>
 
       <div id="page-wrapper">
@@ -99,9 +85,9 @@
         </div>
 
         <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-  Tambah data
-</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                Tambah data
+            </button>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">

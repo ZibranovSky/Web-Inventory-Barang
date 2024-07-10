@@ -33,7 +33,13 @@ if ( !isset($_SESSION["idinv2"])) {
     <!-- Menu -->
     <div id="wrapper">
 
-
+<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">navigation</span> Menu <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand">Inventory</a>
+          </div>
           <?php 
           $id = $_SESSION['idinv2'];
            include '../koneksi.php';
@@ -58,9 +64,35 @@ if ( !isset($_SESSION["idinv2"])) {
           </ul>
 
         <!-- menu samping -->
-       <?php
-       include('sidebar.php');
-       ?>
+        <div class="navbar-default sidebar" role="navigation">
+          <div class="sidebar-nav navbar-collapse">
+            <ul class="nav" id="side-menu">
+              <li>
+                <a href="?m=awal.php">
+                  <i class="fa fa-dashboard"></i> Beranda
+                </a>
+              </li>
+              <li>
+                <a href="?m=barangMasuk&s=awal">
+                  <i class="fa fa-cart-arrow-down"></i> Data Barang Masuk
+                </a>
+              </li>
+                            
+                            <li>
+                <a href="?m=ajuan&s=awal">
+                  <i class="fa fa-gift"></i> Data Ajuan
+                </a>
+              </li>
+              <li>
+                <a href="logout.php" onclick="return confirm('yakin ingin logout?');">
+                  <i class="fa fa-warning"></i> Logout
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+
       </nav>
 
       <div id="page-wrapper">

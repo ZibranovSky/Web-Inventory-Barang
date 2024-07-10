@@ -96,3 +96,28 @@ footer .footer-below {
   padding: 20px 0;
   background-color: #A9ABAE;
 }
+
+.navbar-default.sidebar-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #f8f8f8;
+  border: none;
+  padding: 10px 0;
+}
+.navbar-default.sidebar-horizontal .nav {
+  display: flex;
+}
+.navbar-default.sidebar-horizontal .nav > li {
+  list-style: none;
+  margin: 0 10px;
+}
+.navbar-default.sidebar-horizontal .nav > li > a {
+  color: #333;
+  padding: 10px 15px;
+  text-decoration: none;
+}
+.navbar-default.sidebar-horizontal .nav > li > a:hover {
+  background-color: #e7e7e7;
+  color: #333;
+}
