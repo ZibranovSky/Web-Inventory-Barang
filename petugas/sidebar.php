@@ -8,10 +8,45 @@
         body {
             margin: 0;
             padding: 0;
-           
         }
 
-        
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #696969; /* Blue background */
+            padding: 20px 0;
+            border-bottom: 1px solid #ddd;
+            position: relative;
+            z-index: 10; /* Ensure the logo is above the sidebar */
+        }
+
+        .logo {
+            font-size: 24px;
+            color: #fff; /* White text for contrast */
+            margin: 0 10px;
+            position: relative;
+            text-transform: uppercase;
+            font-family: 'Arial', sans-serif;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 0 #000, 
+                         2px 2px 0 #000, 
+                         3px 3px 0 #000, 
+                         4px 4px 0 #000, 
+                         5px 5px 0 #000;
+            transform: translateZ(0);
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: translateZ(30px);
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.2),
+                         2px 2px 10px rgba(0,0,0,0.2),
+                         3px 3px 15px rgba(0,0,0,0.2),
+                         4px 4px 20px rgba(0,0,0,0.2),
+                         5px 5px 25px rgba(0,0,0,0.2);
+        }
+
         .navbar-default.sidebar-horizontal {
             background: linear-gradient(to right, #00BFFF, #1E90FF);
             padding: 10px 0;
@@ -63,7 +98,6 @@
 </head>
 <body>
     <div class="logo-container">
-      
         <h1 class="logo">POLTEK INVENTORY MANAGEMENT SYSTEM</h1>
     </div>
     <?php 
