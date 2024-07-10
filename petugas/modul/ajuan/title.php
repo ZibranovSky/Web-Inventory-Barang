@@ -24,17 +24,12 @@
 
     <!-- tema css -->
     <link href="../css/tampilanadmin.css" rel="stylesheet">
-    <link href="../sidebar.css" rel="stylesheet">
+    
 
   </head>
   <body>
     <!-- Menu -->
-    <div id="wrapper">
-
-    <div class="logo-container">
-      
-      <h1 class="logo">POLTEK INVENTORY MANAGEMENT SYSTEM</h1>
-  </div>
+    
           <?php 
           $id = $_SESSION['idinv2'];
            include '../koneksi.php';
@@ -43,20 +38,7 @@
             $r = mysqli_fetch_array($query);
 
            ?>
-            <ul class="nav navbar-top-links navbar-right">
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-             </i> <?php echo $r['nama']; ?>
-              </a>
-              <ul class="dropdown-menu dropdown-user">
-                <li>
-                  <form class="" action="logout.php" onclick="return confirm('yakin ingin logout?');" method="post">
-                    <button class="btn btn-default" type="submit" name="keluar"><i class="fa fa-sign-out"></i> Keluar</button>
-                  </form>
-                </li>
-              </ul>
-            </li>
-          </ul>
+            
 
         <!-- menu samping -->
         <?php
@@ -222,18 +204,9 @@
     </div>
 
 
-    <!-- Footer -->
-    <footer class="text-center">
-      <div class="footer-below">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-            <p class="text-muted" style="font-size: 16px;">Copyright &copy; <script>document.write(new Date().getFullYear());</script> Muhamad Zibran Fitadiyatama. All rights reserved</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <?php
+    include('footer.php');
+    ?>
 
     <!-- jQuery -->
     <script src="../vendor/jquery/jquery.min.js"></script>
