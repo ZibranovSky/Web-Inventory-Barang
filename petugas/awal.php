@@ -38,7 +38,7 @@ if ( !isset($_SESSION["idinv2"])) {
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
               <span class="sr-only">navigation</span> Menu <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand">Invento</a>
+            <a class="navbar-brand">Inventory</a>
           </div>
           <?php 
           $id = $_SESSION['idinv2'];
