@@ -36,10 +36,9 @@ hr.star-primary {
 }
 @media (min-width: 768px) {
   #page-wrapper {
-    position: inherit;
-    margin: 0 0 0 250px;
-    padding: 0 30px;
-    border-left: 1px solid #A9ABAE;
+  
+    margin: 0 px;
+
   }
 }
 
