@@ -1,38 +1,57 @@
-
-.logo-container {
+html, body {
+    height: 100%;
+  }
+  #wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  #page-wrapper {
+    flex: 1;
+    padding: 20px;
+    background: linear-gradient(to bottom right, #8A2BE2, #7FFFD4);
+  }
+  .footer-below {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 1rem 0;
     text-align: center;
-    background-color: #f8f8f8;
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;
+  }
+  .table-wrapper {
+    overflow-x: auto;
+    margin: 20px 0;
+  }
+  .table {
+    border: 2px solid #ddd;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Efek bayangan untuk tampilan lebih menarik */
+  }
+  .table thead th {
+    border: 2px solid #ddd;
+    background-color: #FFA500	;
+    color: #4B0082;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+  }
+  .table tbody td {
+    border: 2px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .table tbody tr:nth-child(even) {
+    background-color: #DCDCDC /* Warna latar belakang untuk baris genap */
+  }
+  .table tbody tr:hover {
+    background-color: yellow	; /* Warna latar belakang saat dihover */
+  }
+  .table-responsive {
+    margin-bottom: 20px; /* Tambahkan margin di bagian bawah tabel */
   }
   
-  .logo {
-    font-family: 'Arial', sans-serif;
-    font-size: 24px;
-    color: #333;
-  }
-          .navbar-default.sidebar-horizontal .nav {
-              display: flex;
-          }
-          .navbar-default.sidebar-horizontal .nav > li {
-              list-style: none;
-              margin: 0 10px;
-          }
-          .navbar-default.sidebar-horizontal .nav > li > a {
-              color: darkslategrey;
-              padding: 10px 15px;
-              text-decoration: none;
-          }
-          .navbar-default.sidebar-horizontal .nav > li > a:hover {
-              background-color: wheat;
-              color:#333;
-          }
-          .navbar-brand {
-              display: flex;
-              align-items: center; /* Pusatkan vertikal logo */
-              background-color: aqua; /* Ubah warna latar belakang sesuai kebutuhan */
-              padding: 15px 15px; /* Sesuaikan padding sesuai kebutuhan */
-              width: 100%; /* Pastikan lebar logo mengisi sidebar secara penuh */
-            }
-          
-            
