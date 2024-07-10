@@ -24,6 +24,7 @@
 
     <!-- tema css -->
     <link href="../css/tampilanadmin.css" rel="stylesheet">
+    <link href="../sidebar.css" rel="stylesheet">
 
   </head>
   <body>
