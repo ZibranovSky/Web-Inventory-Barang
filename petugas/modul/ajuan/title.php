@@ -29,12 +29,7 @@
   </head>
   <body>
     <!-- Menu -->
-    <div id="wrapper">
-
-    <div class="logo-container">
-      
-      <h1 class="logo">POLTEK INVENTORY MANAGEMENT SYSTEM</h1>
-  </div>
+    
           <?php 
           $id = $_SESSION['idinv2'];
            include '../koneksi.php';
