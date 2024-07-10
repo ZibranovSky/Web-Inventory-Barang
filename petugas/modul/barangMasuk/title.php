@@ -26,6 +26,22 @@
     <link href="../css/tampilanadmin.css" rel="stylesheet">
 
   </head>
+  <style>
+    .btn-primary {
+    margin-bottom: 20px; /* Tambahkan margin di bagian bawah tombol tambah data */
+}
+.pagination {
+            margin: 20px 0;
+            justify-content: center;
+        }
+        .pagination .page-item .page-link {
+            color: #007bff;
+        }
+        .pagination .page-item.active .page-link {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+  </style>
   <body>
     <!-- Menu -->
     <div id="wrapper">
