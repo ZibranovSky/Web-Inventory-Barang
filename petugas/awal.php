@@ -33,13 +33,7 @@ if ( !isset($_SESSION["idinv2"])) {
     <!-- Menu -->
     <div id="wrapper">
 
-<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">navigation</span> Menu <i class="fa fa-bars"></i>
-            </button>
-            <a class="navbar-brand">POLTEK INVENTORY MANAGEMENT SYSTEM</a>
-          </div>
+
           <?php 
           $id = $_SESSION['idinv2'];
            include '../koneksi.php';

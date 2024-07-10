@@ -48,6 +48,10 @@
             border-radius: 5px;
         }
 </style>
+<div class="logo-container">
+      
+        <h1 class="logo">POLTEK INVENTORY MANAGEMENT SYSTEM</h1>
+    </div>
 <div class="navbar-default sidebar-horizontal" role="navigation">
                 <div class="navbar-collapse">
                     <ul class="nav">
