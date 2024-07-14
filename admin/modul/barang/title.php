@@ -14,7 +14,7 @@
 
     <!-- Icon and Fonts -->
     <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-s
+
     <!-- Custom CSS -->
     <link href="../css/tampilanadmin.css" rel="stylesheet">
 
