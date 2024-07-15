@@ -133,13 +133,13 @@
 
     <!-- Menu Horizontal -->
     <div class="navbar-horizontal">
-      <a href="?m=awal2.php"><i class="fa fa-dashboard"></i> Beranda</a>
-      <a href="?m=admin&s=awal2"><i class="fa fa-user"></i> Data Admin</a>
-      <a href="?m=petugas&s=awal2"><i class="fa fa-users"></i> Data Petugas</a>
-      <a href="?m=supplier&s=awal2"><i class="fa fa-building"></i> Data Supplier</a>
-      <a href="?m=rak&s=awal2"><i class="fa fa-cubes"></i> Data Rak</a>
-      <a href="?m=barang&s=awal2"><i class="fa fa-archive"></i> Data Barang</a>
-      <a href="?m=barangKeluar&s=awal2"><i class="fa fa-cart-arrow-down"></i> Data Barang Keluar</a>
+      <a href="?m=awal.php"><i class="fa fa-dashboard"></i> Beranda</a>
+      <a href="?m=admin&s=awal"><i class="fa fa-user"></i> Data Admin</a>
+      <a href="?m=petugas&s=awal"><i class="fa fa-users"></i> Data Petugas</a>
+      <a href="?m=supplier&s=awal"><i class="fa fa-building"></i> Data Supplier</a>
+      <a href="?m=rak&s=awal"><i class="fa fa-cubes"></i> Data Rak</a>
+      <a href="?m=barang&s=awal"><i class="fa fa-archive"></i> Data Barang</a>
+      <a href="?m=barangKeluar&s=awal"><i class="fa fa-cart-arrow-down"></i> Data Barang Keluar</a>
       <a href="logout.php" onclick="return confirm('Yakin ingin logout?')"><i class="fa fa-warning"></i> Logout</a>
     </div>
 
@@ -169,7 +169,7 @@
                 </div>
               </div>
             </div>
-            <a href="?m=admin&s=awal2">
+            <a href="?m=admin&s=awal">
               <div class="panel-footer">
                 <span class="pull-left">View Details</span>
                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -195,7 +195,7 @@
                 </div>
               </div>
             </div>
-            <a href="?m=rak&s=awal2">
+            <a href="?m=rak&s=awal">
               <div class="panel-footer">
                 <span class="pull-left">View Details</span>
                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -221,7 +221,7 @@
                 </div>
               </div>
             </div>
-            <a href="?m=barang&s=awal2">
+            <a href="?m=barang&s=awal">
               <div class="panel-footer">
                 <span class="pull-left">View Details</span>
                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -247,7 +247,7 @@
                 </div>
               </div>
             </div>
-            <a href="?m=barangMasuk&s=awal2">
+            <a href="?m=barangMasuk&s=awal">
               <div class="panel-footer">
                 <span class="pull-left">View Details</span>
                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -273,7 +273,7 @@
                 </div>
               </div>
             </div>
-            <a href="?m=ajuan&s=awal2">
+            <a href="?m=ajuan&s=awal">
               <div class="panel-footer">
                 <span class="pull-left">View Details</span>
                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -299,7 +299,7 @@
                 </div>
               </div>
             </div>
-            <a href="?m=barangKeluar&s=awal2">
+            <a href="?m=barangKeluar&s=awal">
               <div class="panel-footer">
                 <span class="pull-left">View Details</span>
                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -318,7 +318,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
-            <p class="text-muted" style="font-size: 16px;">Copyright &copy; <script>document.write(new Date().getFullYear());</script> Muhamad Zibran Fitadiyatama. All rights reserved</p>
+            <p class="text-muted" style="font-size: 16px;">Copyright &copy; <script>document.write(new Date().getFullYear());</script> PIMS. All rights reserved</p>
           </div>
         </div>
       </div>
