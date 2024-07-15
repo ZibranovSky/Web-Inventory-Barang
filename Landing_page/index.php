@@ -178,7 +178,7 @@
 
                   <p class="card-text">
                    Admin mempunyai data mulai dari user, supplier, barang keluar, data peminjam, serta 
-                   hal-hal vital lain terkait inventory.
+                   hal - hal vital lain terkait inventory.
                   </p>
 
                 </div>
