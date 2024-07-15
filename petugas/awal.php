@@ -192,7 +192,7 @@ if (!isset($_SESSION["idinv2"])) {
                                 </div>
                             </div>
                         </div>
-                        <a href="?m=ajuan&s=awal">
+                        
                             <div class="panel-footer">
                                 <span class="pull-left">View Details</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
