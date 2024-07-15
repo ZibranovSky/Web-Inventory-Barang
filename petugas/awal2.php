@@ -22,7 +22,7 @@ if ( !isset($_SESSION["idinv2"])) {
     <!-- boootstrap -->
     <link href="../vendor/css/bootstrap/bootstrap.min.css" rel="stylesheet">
 
-    <!-- icon dan fonts -->
+    <!-- icon dan onts -->
     <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- tema css -->
