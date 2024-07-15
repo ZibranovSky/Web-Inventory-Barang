@@ -26,7 +26,7 @@
     <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
       <div class="container">
         <div class="navbar-header page-scroll">
-          <a class="navbar-brand">Login Admin Inventory</a>
+          <a class="navbar-brand">Login Admin Invento</a>
         </div>
       </div>
     </nav>
