@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Funel - Agancy landing page</title>
+  <title>PIMS-Landing Page</title>
 
   <!-- 
     - favicon link
@@ -227,7 +227,7 @@
       <section class="features" id="features">
         <div class="container">
 
-          <h2 class="h2 section-title">Tak usah khawatir, tim kami berisi orang kompeten.</h2>
+          <h2 class="h2 section-title">Tak usah khawatir, Barang anda akan tertata dan tercatat dengan baik.</h2>
 
           <p class="section-text">
            Selain menawarkan manajemen inventory, kami juga menjamin keamanan barang anda.
