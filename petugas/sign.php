@@ -98,16 +98,16 @@
                  
                 </form>
 -->
-          <form class="sign-in-form" action="pro_login_petugas.php" method="post">
+          <form class="sign-in-form" action="pro_login_petugas.php" method="post" autocomplete="off">
             <h2 class="title">Login</h2>
             <div class="form-group input-group">
                     <span class="input-group-addon"><i class="fa fa-laptop"></i></span>
-                    <input class="form-control" type="text" name="user" required="" placeholder="Masukkan username Anda">
+                    <input class="form-control" type="text" name="user" required="" placeholder="Masukkan username Anda" autocomplete="off">
                   </div>
            
                   <div class="form-group input-group">
                     <span class="input-group-addon"><i class="fa fa-key"></i></span>
-                    <input class="form-control" type="password" name="pass" required="" value="" placeholder="Password">
+                    <input class="form-control" type="password" name="pass" required="" value="" placeholder="Password" autocomplete="off">
                   </div>
             <input type="submit" value="Masuk" name="daftar" class="btn solid" />
             
@@ -119,19 +119,19 @@
             <h2 class="title">Sign Up</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" id="username" name="username" />
+              <input type="text" placeholder="Username" id="username" name="username" required/>
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="password" placeholder="Password" id="password" name="password" />
+              <input type="password" placeholder="Password" id="password" name="password" required />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="text" placeholder="Nama" id="nama" name="nama"/>
+              <input type="text" placeholder="Nama" id="nama" name="nama" required/>
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="number" placeholder="telepon" id="telepon" name="telepon"/>
+              <input type="number" placeholder="telepon" id="telepon" name="telepon" required/>
             </div>
             <input type="submit" value="Sign Up" class="btn solid" />
 

@@ -1,102 +1,119 @@
-
-
-
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Login Admin</title>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Admin</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <!-- Font Awesome CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="style.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f5f5f5;
+    }
+    .login-container {
+      max-width: 400px;
+      margin: auto;
+      margin-top: 100px;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .login-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .login-header h3 {
+      color: #333333;
+      font-weight: bold;
+    }
+    .login-form {
+      padding: 20px 0;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      font-weight: bold;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="password"] {
+      border: 1px solid #ced4da;
+      border-radius: 5px;
+      padding: 10px;
+      width: 100%;
+      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+    .form-group input[type="text"]:focus,
+    .form-group input[type="password"]:focus {
+      border-color: #007bff;
+      outline: 0;
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+    .btn-login {
+      background-color: #007bff;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .btn-login:hover {
+      background-color: #0056b3;
+    }
+    .btn-cancel {
+      background-color: #dc3545;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .btn-cancel:hover {
+      background-color: #c82333;
+    }
+  </style>
+</head>
+<body>
 
-    <!-- boootstrap -->
-    <link href="../vendor/css/bootstrap/bootstrap.min.css" rel="stylesheet">
-
-    <!-- icon dan fonts -->
-    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    <!-- tema css -->
-    <link href="../css/tampilan.css" rel="stylesheet">
-
-  </head>
-  <body>
-    <!-- Menu -->
-    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
-      <div class="container">
-        <div class="navbar-header page-scroll">
-          <a class="navbar-brand">Login Admin Invento</a>
+<!-- Main Content -->
+<section class="container">
+  <div class="login-container">
+    <div class="login-header">
+      <h3>Login Admin Inventory</h3>
+    </div>
+    <div class="login-form">
+      <form action="pro_login_admin.php" method="post" class="form">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" class="form-control" id="username" name="user" required placeholder="Masukkan username Anda">
         </div>
-      </div>
-    </nav>
-
-    <!-- Section -->
-    <section class="bagian3">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-4 col-md-offset-4">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h1 class="panel-title text-center">Masuk</h1>
-              </div>
-              <div class="panel-body">
-              	<form class="form" action="pro_login_admin.php" method="post">
-                  <div class="form-group input-group">
-                    <span class="input-group-addon"><i class="fa fa-laptop"></i></span>
-                    <input class="form-control" type="text" name="user"  required="" placeholder="Masukkan username Anda">
-                  </div>
-                 
-                  <div class="form-group input-group">
-                    <span class="input-group-addon"><i class="fa fa-key"></i></span>
-                    <input class="form-control" type="password" name="pass" value="" required="" placeholder="Password">
-                  </div>
-                 
-                  <div class="form-group">
-                    <a href="../index.php">
-                      <button type="button" name="button" class="btn btn-danger">Batal</button>
-                    </a>
-
-                    <input class="btn btn-success" type="submit" name="daftar" value="Masuk">
-                  </div>
-                 
-                </form>
-              </div>
-            </div>
-          </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" name="pass" required placeholder="Password">
         </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer container">
-	
-<section class="col-sm-12" style="margin-top: 50px;">
-<div class="col-lg-10 col-lg-offset-1 text-center">
-<br>
-<ul class="list-inline">
-<li>
-<a href="https://www.facebook.com/zibran.vitadiyatama.7/" target="_blank"><i class="fa fa-facebook fa-fw fa-2x"></i></a>
-</li>
-<li>
-<a href="https://github.com/ZibranovSky" target="_blank"><i class="fa fa-github fa-fw fa-2x"></i></a>
-</li>
-<li>
-<a href="https://www.linkedin.com/in/muhammad-zibran-fitadiyatama-6550801a9/" target="_blank"><i class="fa fa-linkedin fa-fw fa-2x"></i></a>
-</li>
-</ul>
-<hr class="medium">
-<p class="text-muted" style="font-size: 16px;">Copyright &copy;<script>document.write(new Date().getFullYear());</script> Muhamad Zibran Fitadiyatama All rights reserved</p>
-</div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-login btn-block"><i class="fa fa-sign-in-alt"></i> Masuk</button>
+        </div>
+        <div class="text-center">
+          <a href="../Landing_page/index.php" class="btn btn-cancel"><i class="fa fa-times"></i> Batal</a>
+        </div>
+      </form>
+    </div>
+  </div>
 </section>
-</footer>
 
+<!-- jQuery and Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Xpo1GTPwq14uHtFQ6NvZfN+hFckVTtkI0H" crossorigin="anonymous"></script>
 
-    <!-- jQuery -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-
-    <!--include-->
-    <script src="vendor/css/js/bootstrap.min.js"></script>
-
-  </body>
+</body>
 </html>

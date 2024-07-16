@@ -326,7 +326,7 @@ if ( !isset($_SESSION["idinv2"])) {
         
     <div class="footer-bottom">
       <p class="copyright">
-        &copy; 2023 <a>PIMS</a> All right reserved
+        &copy; 2024 <a>PIMS</a> All right reserved
       </p>
     </div>
 
