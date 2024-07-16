@@ -132,123 +132,215 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-lg-12">
-        <h1 class="page-header">Data Admin</h1>
+        <h1 class="page-header">Data Barang Keluar</h1>
       </div>
     </div>
 
     <!-- Button trigger modal -->
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-      <i class="fa fa-plus"></i> Tambah data
+      Tambah data
     </button>
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">Tambah data admin</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form action="?m=admin&s=simpan" method="POST" enctype="multipart/form-data">
-              <div class="form-group">
-                <label for="exampleInputEmail1">Username</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" name="username" aria-describedby="emailHelp" placeholder="Masukkan Username">
-                <small id="emailHelp" class="form-text text-muted">Masukkan username</small>
-              </div>
-              <div class="form-group">
-                <label>Password</label>
-                <input type="password" class="form-control" id="exampleInputEmail1" name="password" aria-describedby="emailHelp" placeholder="Masukkan Password">
-                <small class="form-text text-muted">Masukkan Password</small>
-              </div>
-              <div class="form-group">
-                <label>Nama</label>
-                <input type="text" class="form-control" aria-describedby="emailHelp" name="nama" placeholder="Masukkan Nama">
-                <small id="emailHelp" class="form-text text-muted">Masukkan Nama</small>
-              </div>
-              <div class="form-group">
-                <label for="exampleInputEmail1">Telepon</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" name="telepon" aria-describedby="emailHelp" placeholder="Masukkan Nomor Telepon">
-                <small id="emailHelp" class="form-text text-muted">Masukkan Nomor Telepon</small>
-              </div>
-              <div class="form-group">
-                <label>Foto</label>
-                <input type="file" aria-describedby="emailHelp" name="foto" placeholder="Masukkan Foto">
-                <small id="emailHelp" class="form-text text-muted">Masukkan Foto</small>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="submit" name="simpan" class="btn btn-primary">Simpan</button>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <!-- Data Table -->
-    <div class="row">
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLongTitle">Tambah Data Ajuan</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form action="?m=barangKeluar&s=simpan" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+  <label for="exampleInputEmail1">No Barang Keluar</label>
+  <input type="text"  class="form-control" id="exampleInputEmail1" name="no_brg_out" aria-describedby="emailHelp" placeholder="Masukkan Nomor Barang Keluar">
+  <small id="emailHelp" class="form-text text-muted">Masukkan No Barang Keluar</small>
+</div>
+                  <div class="form-group">
+  <label for="exampleInputEmail1">Nomor Ajuan</label>
+ <?php 
+                      include ("../koneksi.php");
+                      $supp = ("SELECT * FROM tb_ajuan WHERE val = '1' ");
+                      $result = mysqli_query($koneksi, $supp);
+
+                      $jsArray = "var prdName = new Array();";
+
+                      echo '<select name="no_ajuan" onchange="changeValue(this.value)">';
+                      echo '<option>--- PILIH ---</option>';
+
+                      while ($row = mysqli_fetch_array($result)) {
+                          
+                              echo '<option value="'. $row['no_ajuan'] .'">AJ0'.$row['no_ajuan'].'</option>';
+                              $jsArray .= "prdName['". $row['no_ajuan'] ."'] 
+                              = {tanggal_ajuan:'". addslashes($row['tanggal']) ."',
+                                  petugas:'". addslashes($row['petugas']) ."',
+                                  kode_brg:'". addslashes($row['kode_brg']) ."',
+                                  nama_brg:'". addslashes($row['nama_brg']) ."',
+                                  stok:'". addslashes($row['stok']) ."',
+                                  jml_ajuan:'". addslashes($row['jml_ajuan']) ."',
+                                  val:'". addslashes($row['val']) ."'
+
+                              };";
+                          }
+
+                      echo '</select>';
+                  ?>
+                  <script type="text/javascript">
+                      <?php echo $jsArray; ?>
+                      function changeValue(id){
+                          document.getElementById('prd_tanggal').value = prdName[id].tanggal_ajuan;
+                          document.getElementById('prd_petugas').value = prdName[id].petugas;
+                          document.getElementById('prd_kodebrng').value = prdName[id].kode_brg;
+                          document.getElementById('prd_namabrg').value = prdName[id].nama_brg;
+                          document.getElementById('prd_stokbrga').value = prdName[id].stok;
+                          document.getElementById('prd_jmlajuan').value = prdName[id].jml_ajuan;
+                          document.getElementById('prd_val').value = prdName[id].val;
+
+                      }		
+                  </script>
+</div>
+      <div class="form-group">
+  <label for="exampleInputEmail1">Tanggal Ajuan</label>
+  <input type="text" readonly="" class="form-control" id="prd_tanggal" name="tanggal_ajuan" aria-describedby="emailHelp" placeholder="Masukkan Tanggal Ajuan">
+  <small id="emailHelp" class="form-text text-muted">Masukkan Tanggal Ajuan</small>
+</div>
+        <div class="form-group">
+  <label for="exampleInputEmail1">Tanggal Keluar</label>
+  <input type="text" class="form-control" id="exampleInputEmail1" name="tanggal_out" value="<?php echo $tanggalSekarang; ?>" aria-describedby="emailHelp" placeholder="Masukkan Tanggal Keluar">
+  <small id="emailHelp" class="form-text text-muted">Masukkan Tanggal Keluar</small>
+</div>
+
+<div class="form-group">
+  <label for="exampleInputEmail1">Petugas</label>
+  <input type="text" readonly="" class="form-control" id="prd_petugas" name="petugas" aria-describedby="emailHelp" placeholder="Masukkan Petugas">
+
+</div>
+      
+        <div class="form-group">
+  <label for="exampleInputEmail1">Kode Barang</label>
+      <input type="text" readonly="" class="form-control" id="prd_kodebrng" name="kode_brg" aria-describedby="emailHelp" placeholder="Masukkan Tanggal Ajuan">
+
+  
+</div>
+        <div class="form-group">
+  <label for="exampleInputEmail1">Nama Barang</label>
+  <input type="text" name="nama_brg" readonly="" id="prd_namabrg" size="67">
+
+</div>
+        <div class="form-group">
+  <label for="exampleInputEmail1">Stok</label>
+  <input type="text" class="form-control" id="prd_stokbrga" name="stok" readonly="" aria-describedby="emailHelp" placeholder="Masukkan Stok Barang">
+
+</div>
+        <div class="form-group">
+  <label for="exampleInputEmail1">Jumlah Ajuan</label>
+  <input type="text" class="form-control" readonly="" id="prd_jmlajuan" name="jml_ajuan" aria-describedby="emailHelp" placeholder="Masukkan Jumlah Masuk">
+
+</div>
+          <div class="form-group">
+  <label for="exampleInputEmail1">Jumlah Keluar</label>
+  <input type="text" class="form-control" id="exampleInputEmail1" name="jml_keluar" aria-describedby="emailHelp" placeholder="Masukkan Jumlah Masuk">
+  <small id="emailHelp" class="form-text text-muted">Masukkan Jumlah Keluar</small>
+</div>
+        <div class="form-group">
+  <label for="exampleInputEmail1">Admin</label>
+  <input type="text" class="form-control" id="exampleInputEmail1" value="<?php echo $r['nama']; ?>" readonly="" name="admin" aria-describedby="emailHelp" placeholder="Masukkan Nama Admin">
+ 
+</div>
+       
+
+
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <button type="submit" name="simpan" class="btn btn-primary">Save changes</button>
+    </div>
+      </form>
+  </div>
+</div>
+</div>
+
+<div class="row">
       <div class="col-lg-12">
         <div class="table-responsive table--no-card m-b-30">
           <table class="table table-bordered table-striped table-custom">
             <thead>
-              <tr>
-              <th>No Barang Keluar</th>               
-              <th>No Ajuan</th>
-              <th>Tanggal Ajuan</th>
-              <th>Tanggal Keluar</th>
-              <th>petugas</th>
-              <th>kode_brg</th>
-              <th>nama_brg</th>
-              <th>jml_ajuan</th>
-              <th>stok</th>
-              <th>jml_keluar</th>
-              <th>admin</th>
-              <th>aksi</th>                  
-              </tr>
-            </thead>
-            <tbody>
-              <?php include 'paging.php'; ?>
-            </tbody>
-          </table>
-          <center>
-          <center><ul class="pagination justify-content-center">
-                <li class="page-item">
-                    <a class="page-link" <?php if($halaman > 1){ echo "href='?m=barangKeluar&s=awal&halaman=$previous'"; } ?>>Previous</a>
-                </li>
-                <?php 
-                for($x=1;$x<=$total_halaman;$x++){
-                    ?> 
-                    <li class="page-item"><a class="page-link" href="?m=barangKeluar&s=awal&halaman=<?php echo $x ?>"><?php echo $x; ?></a></li>
-                    <?php
-                }
-                ?>              
-                <li class="page-item">
-                    <a  class="page-link" <?php if($halaman < $total_halaman) { echo "href='?m=barangKeluar&s=awal&halaman=$next'"; } ?>>Next</a>
-                </li>
-            </ul>
-              </center> 
-          </center>
+                                          <tr>
+                               <th>No Barang Keluar</th>               
+                               <th>No Ajuan</th>
+                               <th>Tanggal Ajuan</th>
+                               <th>Tanggal Keluar</th>
+                               <th>petugas</th>
+                               <th>kode_brg</th>
+                               <th>nama_brg</th>
+                               <th>jml_ajuan</th>
+                               <th>stok</th>
+                                <th>jml_keluar</th>
+                               <th>admin</th>
+                              
+                              
+
+                              
+                              
+                              <th>Aksi</th>
+                                              
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                         
+                                         <?php 
+                                        
+                                          include 'paging.php';
+
+                                          ?>
+                                      </tbody>
+                                  </table>
+                                  
+                                                               <center><ul class="pagination justify-content-center">
+              <li class="page-item">
+                  <a class="page-link" <?php if($halaman > 1){ echo "href='?m=barangKeluar&s=awal&halaman=$previous'"; } ?>>Previous</a>
+              </li>
+              <?php 
+              for($x=1;$x<=$total_halaman;$x++){
+                  ?> 
+                  <li class="page-item"><a class="page-link" href="?m=barangKeluar&s=awal&halaman=<?php echo $x ?>"><?php echo $x; ?></a></li>
+                  <?php
+              }
+              ?>              
+              <li class="page-item">
+                  <a  class="page-link" <?php if($halaman < $total_halaman) { echo "href='?m=barangKeluar&s=awal&halaman=$next'"; } ?>>Next</a>
+              </li>
+          </ul>
+            </center> 
+                              </div>
+                          </div>
+
+
+    </div>
+  </div>
+
+
+ <!-- Footer -->
+ <footer class="text-center">
+    <div class="footer-below">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <p class="text-muted" style="font-size: 16px;">Copyright &copy; <script>document.write(new Date().getFullYear());</script> PIMS. All rights reserved</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
- <!-- Footer -->
- <footer class="text-center">
-        <div class="footer-below">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <p class="text-muted" style="font-size: 16px;">Copyright &copy; <script>document.write(new Date().getFullYear());</script> PIMS. All rights reserved</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-  <!-- Bootstrap Core JavaScript -->
-  <script src="../vendor/js/bootstrap/bootstrap.min.js"></script>
+  </footer>
+
+  <!-- jQuery -->
   <script src="../vendor/jquery/jquery.min.js"></script>
+
+  <!--include-->
+  <script src="../vendor/css/js/bootstrap.min.js"></script>
+
 </body>
 </html>
