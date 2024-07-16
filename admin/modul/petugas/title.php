@@ -141,87 +141,104 @@
       <i class="fa fa-plus"></i> Tambah data
     </button>
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">Tambah data petugas</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form action="?m=petugas&s=simpan" method="POST" enctype="multipart/form-data">
-              <div class="form-group">
-                <label for="exampleInputEmail1">Username</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" name="username" aria-describedby="emailHelp" placeholder="Masukkan Username">
-                <small id="emailHelp" class="form-text text-muted">Masukkan Username</small>
-              </div>
-              <div class="form-group">
-                <label for="exampleInputEmail1">Password</label>
-                <input type="password" class="form-control" id="exampleInputEmail1" name="password" aria-describedby="emailHelp" placeholder="Masukkan Password">
-                <small id="emailHelp" class="form-text text-muted">Masukkan Password</small>
-              </div>
-              <div class="form-group">
-                <label for="exampleInputEmail1">Nama Petugas</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" name="nama" aria-describedby="emailHelp" placeholder="Masukkan Nama Petugas">
-                <small id="emailHelp" class="form-text text-muted">Masukkan Nama Petugas</small>
-              </div>
-              <div class="form-group">
-                <label for="exampleInputEmail1">Telepon Petugas</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" name="telepon" aria-describedby="emailHelp" placeholder="Masukkan Telepon Petugas">
-                <small id="emailHelp" class="form-text text-muted">Masukkan Telepon Petugas</small>
-              </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="submit" name="simpan" class="btn btn-primary">Save changes</button>
-          </div>
-            </form>
-        </div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Tambah data petugas</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
-    </div>
+      <div class="modal-body">
+        <form action="?m=petugas&s=simpan" method="POST" enctype="multipart/form-data">
+    
+        <div class="form-group">
+    <label for="exampleInputEmail1">Username</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" name="username" aria-describedby="emailHelp" placeholder="Masukkan Username">
+    <small id="emailHelp" class="form-text text-muted">Masukkan Username</small>
+  </div>
+    <div class="form-group">
+    <label for="exampleInputEmail1">Password</label>
+    <input type="password" class="form-control" id="exampleInputEmail1" name="password" aria-describedby="emailHelp" placeholder="Masukkan Password">
+    <small id="emailHelp" class="form-text text-muted">Masukkan Password</small>
+  </div>
+    <div class="form-group">
+    <label for="exampleInputEmail1">Nama Petugas</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" name="nama" aria-describedby="emailHelp" placeholder="Masukkan Nama Petugas">
+    <small id="emailHelp" class="form-text text-muted">Masukkan Nama Petugas</small>
+  </div>
+    <div class="form-group">
+    <label for="exampleInputEmail1">Telepon Petugas</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" name="telepon" aria-describedby="emailHelp" placeholder="Masukkan Telepon Petugas">
+    <small id="emailHelp" class="form-text text-muted">Masukkan Telepon Petugas</small>
+  </div>
+  
 
-    <div class="row">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" name="simpan" class="btn btn-primary">Save changes</button>
+      </div>
+        </form>
+    </div>
+  </div>
+</div>
+
+<div class="row">
       <div class="col-lg-12">
         <div class="table-responsive table--no-card m-b-30">
           <table class="table table-bordered table-striped table-custom">
             <thead>
-              <tr>
-                <th>ID Petugas</th>
-                <th>Nama Petugas</th>
-                <th>Telepon Petugas</th>
-                <th>Aksi</th>
-              </tr>
-            </thead>
-            <tbody>
-              <?php include 'paging.php'; ?>
-            </tbody>
-          </table>
-          <center>
-            <ul class="pagination justify-content-center">
-              <li class="page-item">
-                <a class="page-link" <?php if($halaman > 1){ echo "href='?m=petugas&s=awal&halaman=$previous'"; } ?>>Previous</a>
-              </li>
-              <?php 
+                                            <tr>
+                                                
+                                 <th>Id Petugas</th>
+                                 <th>Nama Petugas</th>
+                                 <th>Telepon Petugas</th>
+                                
+                                
+                                <th>Aksi</th>
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                           
+                                           <?php 
+                                          
+                                            include 'paging.php';
+
+                                            ?>
+                                        </tbody>
+                                    </table>
+                                    
+
+                                                                 <center><ul class="pagination justify-content-center">
+                <li class="page-item">
+                    <a class="page-link" <?php if($halaman > 1){ echo "href='?m=petugas&s=awal&halaman=$previous'"; } ?>>Previous</a>
+                </li>
+                <?php 
                 for($x=1;$x<=$total_halaman;$x++){
-              ?> 
-              <li class="page-item"><a class="page-link" href="?m=petugas&s=awal&halaman=<?php echo $x ?>"><?php echo $x; ?></a></li>
-              <?php
+                    ?> 
+                    <li class="page-item"><a class="page-link" href="?m=petugas&s=awal&halaman=<?php echo $x ?>"><?php echo $x; ?></a></li>
+                    <?php
                 }
-              ?>        
-              <li class="page-item">
-                <a  class="page-link" <?php if($halaman < $total_halaman) { echo "href='?m=petugas&s=awal&halaman=$next'"; } ?>>Next</a>
-              </li>
+                ?>              
+                <li class="page-item">
+                    <a  class="page-link" <?php if($halaman < $total_halaman) { echo "href='?m=petugas&s=awal&halaman=$next'"; } ?>>Next</a>
+                </li>
             </ul>
-          </center>
-        </div>
+              </center> 
+                                </div>
+                            </div>
+
+
       </div>
     </div>
-  </div>
- <!-- Footer -->
- <footer class="text-center">
+
+
+    <!-- Footer -->
+    <footer class="text-center">
       <div class="footer-below">
         <div class="container">
           <div class="row">
@@ -232,13 +249,12 @@
         </div>
       </div>
     </footer>
-  <!-- jQuery -->
-  <script src="../vendor/jquery/jquery.min.js"></script>
 
-  <!-- Bootstrap Core JavaScript -->
-  <script src="../vendor/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
 
-  <!-- Additional JavaScript -->
-  <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
-</body>
+    <!--include-->
+    <script src="../vendor/css/js/bootstrap.min.js"></script>
+
+  </body>
 </html>
