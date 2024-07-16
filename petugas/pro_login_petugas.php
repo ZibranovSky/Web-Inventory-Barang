@@ -21,10 +21,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['teleponinv2'] = $b['telepon'];
         header("location: index.php?m=awal");
     } else {
-        echo '<script language="javascript">';
-        echo 'alert("Username/Password ada yang salah, atau akun anda belum Aktif")';
-        echo '</script>';
-        header("location: login_petugas.php");
+		echo "<script>
+		alert('Username atau Password salah');
+		window.location.href='sign.php';
+	  </script>";
     }
 
     $stmt->close();
