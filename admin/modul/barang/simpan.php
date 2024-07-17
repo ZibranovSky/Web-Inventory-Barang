@@ -1,36 +1,45 @@
 <?php
 include "sesi_admin.php";
+
 if(isset($_POST['simpan'])){
 	include "../koneksi.php";
+	
 	$kode_brg = $_POST['kode_brg'];
 	$nama_brg = $_POST['nama_brg'];
 	$stok = $_POST['stok'];
 	$rak = $_POST['rak'];
 	$supplier = $_POST['supplier'];
 
-	
-	//cek id
-
-	$sql_cek = mysqli_query($koneksi, "SELECT * FROM tb_barang WHERE kode_brg = '$kode_brg'");
-	$cek = mysqli_fetch_row($sql_cek);
+	// Cek kode barang menggunakan prepared statement
+	$sql_cek = "SELECT * FROM tb_barang WHERE kode_brg = ?";
+	$stmt_cek = $koneksi->prepare($sql_cek);
+	$stmt_cek->bind_param("s", $kode_brg);
+	$stmt_cek->execute();
+	$result_cek = $stmt_cek->get_result();
+	$cek = $result_cek->fetch_row();
 
 	if ($cek) {
 		echo "<script>alert('Kode barang sudah ada')</script>";
 		echo '<script>window.history.back()</script>';
-	}else {
-		$sql = "INSERT INTO tb_barang SET kode_brg='$kode_brg', nama_brg='$nama_brg', stok='$stok', rak='$rak', supplier='$supplier'";
-			mysqli_query($koneksi,$sql);
-	if($sql){
-		 echo '<script>window.history.back()</script>';
-		//echo "berhasil";
-	}else{
-		var_dump($sql);
-		echo "gagal";
-	}
-	}
-	
+	} else {
+		// Menambahkan data barang menggunakan prepared statement
+		$sql = "INSERT INTO tb_barang (kode_brg, nama_brg, stok, rak, supplier) VALUES (?, ?, ?, ?, ?)";
+		$stmt = $koneksi->prepare($sql);
+		$stmt->bind_param("ssiss", $kode_brg, $nama_brg, $stok, $rak, $supplier);
+		$stmt->execute();
 		
-}else{
-	echo "gagal";
+		if($stmt->affected_rows > 0){
+			echo '<script>window.history.back()</script>';
+		} else {
+			echo "Gagal menyimpan data";
+		}
+
+		$stmt->close();
+	}
+
+	$stmt_cek->close();
+	$koneksi->close();
+} else {
+	echo "Gagal";
 }
 ?>

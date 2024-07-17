@@ -8,6 +8,5 @@ unset($_SESSION['teleponinv2']);
 
 echo "<script>window.location='../landing_page/index.php'</script>";
 
-//session_destroy();
 
 ?>

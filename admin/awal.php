@@ -234,32 +234,6 @@
             <div class="panel-heading">
               <div class="row">
                 <div class="col-xs-3">
-                  <i class="fa fa-cart-plus fa-5x"></i>
-                </div>
-                <div class="col-xs-9 text-right">
-                  <?php
-                    $sql = "SELECT count(id_brg_in) as jbrg_in FROM tb_barang_in";
-                    $query = mysqli_query($koneksi, $sql);
-                    $r = mysqli_fetch_array($query);
-                    echo "<h3>".$r['jbrg_in']."</h3>";
-                  ?>
-                  <div>Jumlah Barang Masuk</div>
-                </div>
-              </div>
-            </div>
-            <a href="?m=barangMasuk&s=awal">
-              <div class="panel-footer">
-                <span class="pull-left">View Details</span>
-                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                <div class="clearfix"></div>
-              </div>
-            </a>
-          </div>
-
-          <div class="panel panel-red">
-            <div class="panel-heading">
-              <div class="row">
-                <div class="col-xs-3">
                   <i class="fa fa-gift fa-5x"></i>
                 </div>
                 <div class="col-xs-9 text-right">
@@ -274,6 +248,32 @@
               </div>
             </div>
             <a href="?m=ajuan&s=awal">
+              <div class="panel-footer">
+                <span class="pull-left">View Details</span>
+                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                <div class="clearfix"></div>
+              </div>
+            </a>
+          </div>
+
+          <div class="panel panel-red">
+            <div class="panel-heading">
+              <div class="row">
+                <div class="col-xs-3">
+                  <i class="fa fa-cart-plus fa-5x"></i>
+                </div>
+                <div class="col-xs-9 text-right">
+                  <?php
+                    $sql = "SELECT count(id_brg_in) as jbrg_in FROM tb_barang_in";
+                    $query = mysqli_query($koneksi, $sql);
+                    $r = mysqli_fetch_array($query);
+                    echo "<h3>".$r['jbrg_in']."</h3>";
+                  ?>
+                  <div>Jumlah Barang Masuk</div>
+                </div>
+              </div>
+            </div>
+            <a href="?m=barangMasuk&s=awal">
               <div class="panel-footer">
                 <span class="pull-left">View Details</span>
                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
