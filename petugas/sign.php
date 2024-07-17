@@ -6,6 +6,7 @@
     <title>SignIn&SignUp</title>
     
     <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.min.css" integrity="sha256-Qsx5lrStHZyR9REqhUF8iQt73X06c8LGIUPzpOhwRrI=" crossorigin="anonymous">
     
     <script
       src="https://kit.fontawesome.com/64d58efce2.js"

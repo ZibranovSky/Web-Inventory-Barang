@@ -50,6 +50,20 @@ if (!isset($_SESSION["idinv2"])) {
             transform: translateY(-2px); /* Menggeser tombol ke atas sedikit saat dihover */
         }
     </style>
+
+    <script>
+        function validateForm() {
+            var fields = ["tanggal", "noinv", "kode_brg", "nama_brg", "supplier", "stok", "jml_masuk", "jam", "petugas"];
+            for (var i = 0; i < fields.length; i++) {
+                var field = document.forms["dataForm"][fields[i]].value.trim();
+                if (field == "" || field == null) {
+                    alert("Field tidak boleh kosong atau hanya berisi spasi.");
+                    return false;
+                }
+            }
+            return true;
+        }
+    </script>
 </head>
 <body>
     <!-- Menu -->
@@ -82,7 +96,7 @@ if (!isset($_SESSION["idinv2"])) {
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form action="?m=barangMasuk&s=simpan" method="POST" enctype="multipart/form-data">
+                            <form name="dataForm" action="?m=barangMasuk&s=simpan" method="POST" enctype="multipart/form-data" onsubmit="return validateForm()">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Tanggal</label>
                                     <input type="text" class="form-control" value="<?php echo $tanggalSekarang; ?>" id="exampleInputEmail1" name="tanggal" aria-describedby="emailHelp" placeholder="Masukkan Tanggal">
