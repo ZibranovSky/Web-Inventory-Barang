@@ -3,6 +3,17 @@ date_default_timezone_set("Asia/Jakarta");
 $tanggalSekarang = date("Y-m-d");
 $jamSekarang = date("h:i a");
 ?>
+
+<?php
+session_destroy();
+function cek_login() {
+    if (!isset($_SESSION['idinv'])) {
+        header("Location: login.php");
+        exit();
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
