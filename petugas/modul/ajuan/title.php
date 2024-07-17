@@ -21,17 +21,28 @@ $jamSekarang = date("h:i a");
     <link href="../css/tampilanadmin.css" rel="stylesheet">
     <link href="../css/sidebar.css" rel="stylesheet">
     <style>
-        .btn-primary {
-  margin-bottom: 20px; /* Tambahkan margin di bagian bawah tombol tambah data */ 
-  background-color: #228B22;   
-}
-.btn-primary:hover,
-.btn-primary:active,
-.btn-primary:focus {
-background-color: #FFD700; /* Yellow color */
-border-color: #708090; /* Match border color to background color */
-color: #212529; /* Text color */
-}
+    .btn-primary {
+            margin-bottom: 20px; /* Tambahkan margin di bagian bawah tombol tambah data */ 
+            background-color: #32CD32;
+            color: #fff;
+            border: none;
+            border-bottom: 4px solid #006400; /* Garis bawah sebagai efek 3D */
+            box-shadow: 0 4px #006400; /* Efek shadow di bawah tombol */
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover,
+        .btn-primary:active,
+        .btn-primary:focus {
+            background-color: #7FFF00; /* Warna background saat tombol dihover */
+            border-bottom-color: #3d9a35; /* Warna garis bawah saat dihover */
+            box-shadow: 0 6px #166d19; /* Menambahkan efek shadow lebih besar saat dihover */
+            transform: translateY(-2px); /* Menggeser tombol ke atas sedikit saat dihover */
+        }
+</style>
+
+</style>
+
     </style> 
 </head>
 <body>
@@ -130,10 +141,10 @@ color: #212529; /* Text color */
                                 <small id="emailHelp" class="form-text text-muted">Masukkan Jumlah Ajuan</small>
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Petugas</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" value="<?php echo $r['nama']; ?>" readonly="" name="petugas" aria-describedby="emailHelp" placeholder="Masukkan Nama Admin">
+    <label for="exampleInputEmail1">Petugas</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" value="<?php echo htmlspecialchars($r['nama'], ENT_QUOTES); ?>" readonly="" name="petugas" aria-describedby="emailHelp" placeholder="Masukkan Nama Admin">
+</div>
 
-                            </div>
 
 
 

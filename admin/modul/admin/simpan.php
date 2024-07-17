@@ -1,6 +1,7 @@
 <?php
 error_reporting(0);
 include "sesi_admin.php";
+
 if(isset($_POST['simpan'])){
 	include "../koneksi.php";
 	include "../fungsi/upload.php";
@@ -48,5 +49,6 @@ if(isset($_POST['simpan'])){
 	$koneksi->close();
 } else {
 	echo "Gagal";
+
 }
 ?>
