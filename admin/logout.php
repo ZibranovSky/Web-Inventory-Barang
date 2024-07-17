@@ -7,6 +7,5 @@ unset($_SESSION['namainv2']);
 unset($_SESSION['teleponinv2']);
 
 
-//session_destroy();
 
 ?>
