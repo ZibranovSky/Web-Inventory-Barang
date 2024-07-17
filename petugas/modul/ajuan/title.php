@@ -141,10 +141,10 @@ $jamSekarang = date("h:i a");
                                 <small id="emailHelp" class="form-text text-muted">Masukkan Jumlah Ajuan</small>
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Petugas</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" value="<?php echo $r['nama']; ?>" readonly="" name="petugas" aria-describedby="emailHelp" placeholder="Masukkan Nama Admin">
+    <label for="exampleInputEmail1">Petugas</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" value="<?php echo htmlspecialchars($r['nama'], ENT_QUOTES); ?>" readonly="" name="petugas" aria-describedby="emailHelp" placeholder="Masukkan Nama Admin">
+</div>
 
-                            </div>
 
 
 
