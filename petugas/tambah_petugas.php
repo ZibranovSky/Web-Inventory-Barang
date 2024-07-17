@@ -1,22 +1,31 @@
 <?php
- include '../koneksi.php';
+include '../koneksi.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Ambil data dari form
     $username = $_POST['username'];
     $password = md5($_POST['password']);
     $nama = $_POST['nama'];
     $telepon = $_POST['telepon'];
 
-    $query = "INSERT INTO tb_petugas (username,password,nama,telepon) VALUES ('$username', '$password', '$nama', '$telepon')";
+    // Buat prepared statement
+    $stmt = $koneksi->prepare("INSERT INTO tb_petugas (username, password, nama, telepon) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("ssss", $username, $password, $nama, $telepon);
 
-    if (mysqli_query($koneksi, $query)) {
+    // Eksekusi prepared statement
+    if ($stmt->execute()) {
         echo "<script>
                 alert('Data Berhasil Ditambahkan');
                 window.location.href='sign.php';
               </script>";
     } else {
-        echo "Error: " . $query . "<br>" . mysqli_error($koneksi);
+        echo "Error: " . $stmt->error;
     }
+
+    // Tutup statement
+    $stmt->close();
+
+    // Tutup koneksi
     mysqli_close($koneksi);
 }
 ?>
