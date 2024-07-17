@@ -2,6 +2,14 @@
 date_default_timezone_set("Asia/Jakarta");
 $tanggalSekarang = date("Y-m-d");
 $jamSekarang = date("h:i a");
+
+include '../koneksi.php';
+if (!isset($_SESSION["idinv2"])) {
+
+    header("Location: sign.php");
+    exit();
+}
+
 ?>
 <!DOCTYPE html>
 <html>

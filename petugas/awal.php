@@ -1,7 +1,8 @@
 <?php 
 include '../koneksi.php';
 if (!isset($_SESSION["idinv2"])) {
-    header("Location: login_petugas.php");
+
+    header("Location: sign.php");
     exit();
 }
 ?>
