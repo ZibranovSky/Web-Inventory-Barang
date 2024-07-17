@@ -1,3 +1,8 @@
+<?php 
+date_default_timezone_set("Asia/Jakarta");
+$tanggalSekarang = date("Y-m-d");
+$jamSekarang = date("h:i a");
+?>
 <!DOCTYPE html>
 <html>
 <head>
