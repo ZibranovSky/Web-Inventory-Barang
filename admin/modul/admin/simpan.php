@@ -4,41 +4,49 @@ include "sesi_admin.php";
 if(isset($_POST['simpan'])){
 	include "../koneksi.php";
 	include "../fungsi/upload.php";
+
 	$username = $_POST['username'];
 	$password = md5($_POST['password']);
 	$nama = $_POST['nama'];
 	$telepon = $_POST['telepon'];
-	$lokasi =$_FILES['foto']['tmp_name'];
-	$namafile=$_FILES['foto']['name'];
+	$lokasi = $_FILES['foto']['tmp_name'];
+	$namafile = $_FILES['foto']['name'];
 	$fotobaru = date('dmYHis').$namafile;
-	$tipefile=$_FILES['foto']['type'];
+	$tipefile = $_FILES['foto']['type'];
 	
-	//cek username
+	// Cek username
+	$sql = "SELECT * FROM tb_admin WHERE username = ?";
+	$stmt = $koneksi->prepare($sql);
+	$stmt->bind_param("s", $username);
+	$stmt->execute();
+	$result = $stmt->get_result();
+	$row = $result->fetch_row();
 
-	$sql    = "SELECT * FROM tb_admin WHERE username = '".$username."'";
-    $tambah = mysqli_query($koneksi, $sql);
-    $row    = mysqli_fetch_row($tambah);
-
-    if ($row) {
-    	echo "username sudah ada";
-    }else if(empty($lokasi)){
-		$sql = "INSERT INTO tb_admin SET username='$username', password='$password', nama='$nama', telepon='$telepon'";
-		mysqli_query($koneksi,$sql);
-		header("location: ?m=admin&s=awal");
-	}else{
-		$folder="../images/admin/";
-		$ukuran=100;
-		UploadFoto($fotobaru,$folder,$ukuran);
+	if ($row) {
+		echo "Username sudah ada";
+	} else if (empty($lokasi)) {
+		// Insert data tanpa foto
+		$sql = "INSERT INTO tb_admin (username, password, nama, telepon) VALUES (?, ?, ?, ?)";
+		$stmt = $koneksi->prepare($sql);
+		$stmt->bind_param("ssss", $username, $password, $nama, $telepon);
+		$stmt->execute();
+		header("Location: ?m=admin&s=awal");
+	} else {
+		// Upload foto dan insert data dengan foto
+		$folder = "../images/admin/";
+		$ukuran = 100;
+		UploadFoto($fotobaru, $folder, $ukuran);
 		
-		$sql = "INSERT INTO tb_admin SET username='$username', password='$password', nama='$nama', telepon='$telepon', foto='$fotobaru'";
-			mysqli_query($koneksi,$sql);
-			header("location: ?m=admin&s=awal");
+		$sql = "INSERT INTO tb_admin (username, password, nama, telepon, foto) VALUES (?, ?, ?, ?, ?)";
+		$stmt = $koneksi->prepare($sql);
+		$stmt->bind_param("sssss", $username, $password, $nama, $telepon, $fotobaru);
+		$stmt->execute();
+		header("Location: ?m=admin&s=awal");
 	}
- 
-	
 
-
-}else{
-	echo "gagal";
+	$stmt->close();
+	$koneksi->close();
+} else {
+	echo "Gagal";
 }
 ?>
