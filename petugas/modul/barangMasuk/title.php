@@ -25,23 +25,23 @@ $jamSekarang = date("h:i a");
     <link href="../css/sidebar.css" rel="stylesheet">
 
     <style>
-        .btn-primary {
-            margin-bottom: 10px; /* Tambahkan margin di bagian bawah tombol tambah data */ 
-            background-color: #228B22;   
+       .btn-primary {
+            margin-bottom: 20px; /* Tambahkan margin di bagian bawah tombol tambah data */ 
+            background-color: #32CD32;
+            color: #fff;
+            border: none;
+            border-bottom: 4px solid #006400; /* Garis bawah sebagai efek 3D */
+            box-shadow: 0 4px #006400; /* Efek shadow di bawah tombol */
+            transition: all 0.3s ease;
         }
+
         .btn-primary:hover,
         .btn-primary:active,
         .btn-primary:focus {
-        background-color: #FFD700; /* Yellow color */
-        border-color: #708090; /* Match border color to background color */
-        color: #212529; /* Text color */
-        }
-        .pagination .page-item .page-link {
-            color: #007bff;
-        }
-        .pagination .page-item.active .page-link {
-            background-color: #007bff;
-            border-color: #007bff;
+            background-color: #7FFF00; /* Warna background saat tombol dihover */
+            border-bottom-color: #3d9a35; /* Warna garis bawah saat dihover */
+            box-shadow: 0 6px #166d19; /* Menambahkan efek shadow lebih besar saat dihover */
+            transform: translateY(-2px); /* Menggeser tombol ke atas sedikit saat dihover */
         }
     </style>
 </head>
