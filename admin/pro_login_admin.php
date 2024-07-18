@@ -1,37 +1,39 @@
-<?php 
-include '../koneksi.php';
+<?php
+session_start();
+include 'config.php'; // Pastikan Anda telah mengatur koneksi database di file config.php
 
-// Ambil data dari form login
-$user = $_POST['user'];
-$pass = md5($_POST['pass']);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST['user'];
+    $password = $_POST['pass'];
 
-// Buat prepared statement
-$stmt = $koneksi->prepare("SELECT * FROM tb_admin WHERE username = ? AND password = ?");
-$stmt->bind_param("ss", $user, $pass);
+    try {
+        // Buat koneksi menggunakan PDO
+        $pdo = new PDO($dsn, $db_username, $db_password, $options);
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-// Jalankan statement
-$stmt->execute();
+        // Query SQL menggunakan prepared statements
+        $stmt = $pdo->prepare("SELECT * FROM admins WHERE username = :username AND password = :password");
+        $stmt->bindParam(':username', $username, PDO::PARAM_STR);
+        $stmt->bindParam(':password', $password, PDO::PARAM_STR);
+        $stmt->execute();
 
-// Ambil hasil query
-$result = $stmt->get_result();
-$ketemu = $result->num_rows;
-$b = $result->fetch_array(MYSQLI_ASSOC);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-if ($ketemu > 0) {
-    session_start();
-    $_SESSION['idinv'] = $b['id_admin'];
-    $_SESSION['userinv'] = $b['username'];
-    $_SESSION['passinv'] = $b['password'];
-    $_SESSION['namainv'] = $b['nama'];
-    $_SESSION['teleponinv'] = $b['telepon'];
-    $_SESSION['fotoinv'] = $b['foto'];
-    header("Location: index.php?m=awal");
-    exit();
+        if ($user) {
+            // Login sukses, simpan data user di sesi
+            $_SESSION['user'] = $user;
+            header("Location: admin_dashboard.php"); // Ganti dengan halaman dashboard admin Anda
+            exit();
+        } else {
+            // Login gagal, kembali ke halaman login
+            header("Location: login_admin.php?error=1");
+            exit();
+        }
+    } catch (PDOException $e) {
+        echo "Error: " . $e->getMessage();
+    }
 } else {
-	echo "<script>
-	alert('Username atau Password salah');
-	window.location.href='login.php';
-  </script>";
+    header("Location: login_admin.php");
     exit();
 }
 ?>
