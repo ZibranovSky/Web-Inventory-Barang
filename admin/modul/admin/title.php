@@ -1,11 +1,12 @@
 <?php
-session_destroy();
-function cek_login() {
-    if (!isset($_SESSION['idinv'])) {
-        header("Location: login.php");
-        exit();
-    }
+// session_destroy();
+include '../koneksi.php';
+if (!isset($_SESSION["idinv"])) {
+
+    header("Location: login.php");
+    exit();
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -119,7 +120,6 @@ function cek_login() {
     </div>
     <?php 
       $id = $_SESSION['idinv'];
-      include '../koneksi.php';
       $sql = "SELECT * FROM tb_admin WHERE id_admin = '$id'";
       $query = mysqli_query($koneksi, $sql);
       $r = mysqli_fetch_array($query);
@@ -226,7 +226,7 @@ function cek_login() {
               <?php 
                 for($x=1;$x<=$total_halaman;$x++){
               ?> 
-              <li class="page-item"><a class="page-link" href="?m=admin&s=awal&halaman=<?php echo $x ?>"><?php echo $x; ?></a></li>
+              <li class="page-item"><a class="page-link" href="?m=admin&s=awal&halaman=<?php echo $x; ?>"><?php echo $x; ?></a></li>
               <?php } ?>              
               <li class="page-item">
                 <a class="page-link" <?php if($halaman < $total_halaman) { echo "href='?m=admin&s=awal&halaman=$next'"; } ?>>Next</a>
@@ -256,5 +256,22 @@ function cek_login() {
 
   <!-- Bootstrap JavaScript -->
   <script src="../vendor/css/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("form").on("submit", function(e){
+        let isValid = true;
+        $(this).find("input").each(function(){
+          if ($(this).val().trim() === "") {
+            isValid = false;
+            alert("Field " + $(this).attr("name") + " cannot be empty or spaces only.");
+            return false;
+          }
+        });
+        if (!isValid) {
+          e.preventDefault();
+        }
+      });
+    });
+  </script>
 </body>
 </html>

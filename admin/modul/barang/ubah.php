@@ -162,7 +162,7 @@
                 $hasil = mysqli_query($koneksi, $sql);
                 while ($data = mysqli_fetch_array($hasil)) {
               ?>  
-              <option value="<?php echo $data['nama_rak'];?>"><?php echo $data['nama_rak']; ?></option>
+              <option value="<?php echo $data['nama_rak'];?>" <?php if($data['nama_rak'] == $r['rak']) echo 'selected'; ?>><?php echo $data['nama_rak']; ?></option>
               <?php } ?>                                                  
             </select>
           </div>
@@ -176,7 +176,7 @@
                 $hasil = mysqli_query($koneksi, $sql);
                 while ($data = mysqli_fetch_array($hasil)) {
               ?>
-              <option value="<?php echo $data['nama_sup'];?>"><?php echo $data['nama_sup']; ?></option>
+              <option value="<?php echo $data['nama_sup'];?>" <?php if($data['nama_sup'] == $r['supplier']) echo 'selected'; ?>><?php echo $data['nama_sup']; ?></option>
               <?php } ?>
             </select>
           </div>
@@ -193,7 +193,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
-            <p class="text-muted" style="font-size: 16px;">Copyright &copy;<script>document.write(new Date().getFullYear());</script> Muhamad Zibran Fitadiyatama. All rights reserved</p>
+            <p class="text-muted" style="font-size: 16px;">Copyright &copy;<script>document.write(new Date().getFullYear());</script> PIMS. All rights reserved</p>
           </div>
         </div>
       </div>

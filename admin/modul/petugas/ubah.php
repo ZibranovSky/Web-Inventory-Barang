@@ -28,7 +28,7 @@
     }
     .navbar-custom .navbar-brand {
       font-weight: bold;
-      font-size: 30px; /* Increase font size */
+      font-size: 30px;
     }
     .navbar-custom .navbar-nav > li > a:hover {
       background-color: #1abc9c;
@@ -55,7 +55,7 @@
     }
     .page-header {
       text-align: center;
-      margin-top: -20px; /* Move text higher */
+      margin-top: -20px;
       margin-bottom: 30px;
     }
     .table-earning th, .table-earning td {
@@ -74,7 +74,6 @@
       justify-content: center;
       width: 100%;
     }
-    /* Custom table styles */
     .table-custom {
       margin: 20px 0;
       box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
@@ -99,7 +98,6 @@
   </style>
 </head>
 <body>
-  <!-- Menu -->
   <nav class="navbar navbar-custom navbar-static-top" role="navigation" style="margin-bottom: 0">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -116,7 +114,6 @@
     ?>
   </nav>
 
-  <!-- Horizontal Menu -->
   <div class="navbar-horizontal">
     <a href="?m=awal.php"><i class="fa fa-dashboard"></i> Beranda</a>
     <a href="?m=admin&s=awal"><i class="fa fa-user"></i> Data Admin</a>
@@ -166,14 +163,13 @@
     </div>
   </div>
 
-  <!-- Footer -->
   <footer class="text-center">
     <div class="footer-below">
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
             <p class="text-muted" style="font-size: 16px;">Copyright &copy; 
-              <script>document.write(new Date().getFullYear());</script> Muhamad Zibran Fitadiyatama. All rights reserved</p>
+              <script>document.write(new Date().getFullYear());</script> PIMS. All rights reserved</p>
           </div>
         </div>
       </div>

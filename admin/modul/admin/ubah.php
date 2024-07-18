@@ -97,6 +97,22 @@
       vertical-align: middle;
     }
   </style>
+
+  <script>
+    function validateForm() {
+      var username = document.forms["adminForm"]["username"].value.trim();
+      var password = document.forms["adminForm"]["password"].value.trim();
+      var nama = document.forms["adminForm"]["nama"].value.trim();
+      var telepon = document.forms["adminForm"]["telepon"].value.trim();
+
+      if (username == "" || password == "" || nama == "" || telepon == "") {
+        alert("Semua kolom harus diisi.");
+        return false;
+      }
+
+      return true;
+    }
+  </script>
 </head>
 <body>
   <!-- Menu -->
@@ -108,7 +124,7 @@
       <a class="navbar-brand" href="#">Poltek Inventory Management System</a>
     </div>
     <?php 
-      $id = $_SESSION['idinv'];
+      $id = $_GET['id_admin'];
       include '../koneksi.php';
       $sql = "SELECT * FROM tb_admin WHERE id_admin = '$id'";
       $query = mysqli_query($koneksi, $sql);
@@ -128,7 +144,6 @@
     <a href="logout.php" onclick="return confirm('Yakin ingin logout?')"><i class="fa fa-warning"></i> Logout</a>
   </div>
 
-
   <div class="container-fluid">
     <div class="row">
       <div class="col-lg-12">
@@ -138,8 +153,8 @@
 
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
-        <form action="?m=admin&s=update" method="POST" enctype="multipart/form-data">
-          <input type="hidden" name="id_admin" value="<?php echo $r['id_admin']; ?>" >
+        <form name="adminForm" action="?m=admin&s=update" method="POST" enctype="multipart/form-data" onsubmit="return validateForm()">
+          <input type="hidden" name="id_admin" value="<?php echo $r['id_admin']; ?>">
 
           <div class="form-group">
             <label for="exampleInputEmail1">Username</label>
@@ -172,7 +187,6 @@
         </form>
       </div>
     </div>
-
   </div>
 
   <!-- Footer -->
