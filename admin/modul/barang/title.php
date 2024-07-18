@@ -1,12 +1,3 @@
-<?php
-session_destroy();
-function cek_login() {
-    if (!isset($_SESSION['idinv'])) {
-        header("Location: login.php");
-        exit();
-    }
-}
-?>
 
 <!DOCTYPE html>
 <html>
@@ -204,11 +195,11 @@ function cek_login() {
                                     <?php } ?>
                                 </select>
                             </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" name="simpan" class="btn btn-primary">Save changes</button>
                         </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" name="simpan" class="btn btn-primary">Save changes</button>
                     </div>
                 </div>
             </div>
@@ -280,5 +271,22 @@ function cek_login() {
 
     <!-- Bootstrap JavaScript -->
     <script src="../vendor/css/js/bootstrap.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $("form").on("submit", function(e){
+        let isValid = true;
+        $(this).find("input").each(function(){
+          if ($(this).val().trim() === "") {
+            isValid = false;
+            alert("Field cannot be empty or spaces only.");
+            return false;
+          }
+        });
+        if (!isValid) {
+          e.preventDefault();
+        }
+      });
+    });
+  </script>
   </body>
 </html>
