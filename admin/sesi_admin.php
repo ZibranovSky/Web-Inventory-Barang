@@ -1,5 +1,5 @@
 <?php 
-if(empty($_SESSION['idinv']) AND empty($_SESSION['inv'])){
+if(!isset($_SESSION['idinv'])){
 	header('location: login.php');
 }
  ?>

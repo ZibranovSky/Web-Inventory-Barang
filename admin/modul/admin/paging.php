@@ -39,7 +39,7 @@ while ($row=mysqli_fetch_array($data_karyawan)) {
 
 
 
-                                                <td><a href="index.php?m=admin&s=hapus&id_admin=<?php echo $row['id_admin'];?>" onclick="return confirm('Yakin Akan dihapus?')"><button class="btn btn-danger">Hapus</button></a> | <a href="index.php?m=admin&s=ubah&id_admin=<?php echo $row['id_admin'];?>" onclick="return confirm(\'Yakin Akan dihapus?\')"><button class="btn btn-primary">Ubah</button></a></td>
+                                                <td><a href="index.php?m=admin&s=hapus&id_admin=<?php echo $row['id_admin'];?>" onclick="return confirm('Yakin Akan dihapus?')"><button class="btn btn-danger">Hapus</button></a> | <a href="index.php?m=admin&s=ubah&id_admin=<?php echo $row['id_admin'];?>"><button class="btn btn-primary">Ubah</button></a></td>
 
 
                                                 

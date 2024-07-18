@@ -1,3 +1,10 @@
+<?php
+include '../koneksi.php';
+if (!isset($_SESSION["idinv"])) {
+    header("Location: login.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>

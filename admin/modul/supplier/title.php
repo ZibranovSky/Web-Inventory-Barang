@@ -1,5 +1,5 @@
 <?php
-session_destroy();
+//session_destroy();//
 function cek_login() {
     if (!isset($_SESSION['idinv'])) {
         header("Location: login.php");
@@ -263,6 +263,22 @@ function cek_login() {
 
     <!--include-->
     <script src="../vendor/css/js/bootstrap.min.js"></script>
-
+    <script>
+    $(document).ready(function(){
+      $("form").on("submit", function(e){
+        let isValid = true;
+        $(this).find("input").each(function(){
+          if ($(this).val().trim() === "") {
+            isValid = false;
+            alert("Field cannot be empty or spaces only.");
+            return false;
+          }
+        });
+        if (!isValid) {
+          e.preventDefault();
+        }
+      });
+    });
+  </script>
   </body>
 </html>
