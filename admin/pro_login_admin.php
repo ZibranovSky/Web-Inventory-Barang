@@ -32,6 +32,6 @@ if ($ketemu > 0) {
 	alert('Username atau Password salah');
 	window.location.href='login.php';
   </script>";
-    exit();
+    exit();
 }
 ?>
