@@ -1,98 +1,56 @@
-body {
-  font-family: Arial, sans-serif;
+html, body {
+  height: 100%;
 }
-p {
-  font-size: 15px;
-}
-h1 {
-  text-transform: uppercase;
-  font-weight: 500;
-}
-hr.star-light {
-  padding: 0;
-  border: none;
-  border-top: solid 5px;
-  max-width: 1350px;
-  margin: 10px auto 30px;
-}
-hr.star-light {
-  border-color: black;
-}
-hr.star-primary {
-  padding: 0;
-  border: none;
-  border-top: solid 5px;
-  max-width: 250px;
-  margin: 10px auto 30px;
-}
-
 #wrapper {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 #page-wrapper {
-  padding: 0 15px;
-  min-height: 568px;
-  background-color: #E6E7E8;
+  flex: 1;
+  padding: 20px;
+  background: linear-gradient(to bottom right, #9ACD32, #7FFFD4,#7CFC00);
 }
-@media (min-width: 768px) {
-  #page-wrapper {
-    position: inherit;
-    margin: 0 0 0 250px;
-    padding: 0 30px;
-    border-left: 1px solid #A9ABAE;
-  }
+.footer-below {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: #f8f9fa;
+  padding: 1rem 0;
+  text-align: center;
 }
-
-.navbar {
-  background-color: #BDBFC1;
-  font-weight: 700;
-  font-family: arial;
-  text-transform: uppercase;
-  border: none;
+.table-wrapper {
+  overflow-x: auto;
+  margin: 20px 0;
 }
-.navbar-top-links {
-  margin-right: 0;
+.table {
+  border: 2px solid #ddd;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Efek bayangan untuk tampilan lebih menarik */
 }
-.navbar-top-links li {
-  display: inline-block;
+.table thead th {
+  border: 2px solid #ddd;
+  background-color: #FFA500	;
+  color: #4B0082;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
 }
-.navbar-top-links li:last-child {
-  margin-right: 15px;
+.table tbody td {
+  border: 2px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
 }
-.navbar-top-links li a {
-  padding: 15px;
-  min-height: 50px;
+.table tbody tr:nth-child(even) {
+  background-color: #DCDCDC /* Warna latar belakang untuk baris genap */
 }
-.sidebar {
-  background-color: #E6E7E8;
+.table tbody tr:hover {
+  background-color: yellow	; /* Warna latar belakang saat dihover */
 }
-.sidebar .sidebar-nav.navbar-collapse {
-  padding-left: 0;
-  padding-right: 0;
-}
-.sidebar ul li {
-  border-bottom: 1px solid #A9ABAE;
-}
-.sidebar ul li a.active {
-  background-color: red;
-}
-@media (min-width: 768px) {
-  .sidebar {
-    z-index: 1;
-    position: absolute;
-    width: 250px;
-    margin-top: 51px;
-  }
-  .navbar-top-links {
-    margin-left: auto;
-  }
-}
-
-footer {
-  color: black;
-  font-size: 15px;
-}
-footer .footer-below {
-  padding: 20px 0;
-  background-color: #A9ABAE;
+.table-responsive {
+  margin-bottom: 20px; /* Tambahkan margin di bagian bawah tabel */
 }
