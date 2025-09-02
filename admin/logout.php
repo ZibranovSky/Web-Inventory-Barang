@@ -5,9 +5,8 @@ unset($_SESSION['userinv']);
 unset($_SESSION['passinv']);
 unset($_SESSION['namainv']);
 unset($_SESSION['teleponinv']);
-unset($_SESSION['fotoinv']);
 
-echo "<script>window.location='../'</script>";
-//session_destroy();
+echo "<script>window.location='../landing_page/index.php'</script>";
+
 
 ?>

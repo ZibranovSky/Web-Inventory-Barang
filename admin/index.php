@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once "sesi_admin.php";
+include "sesi_admin.php";
 $modul=(isset($_GET['m']))?$_GET['m']:"awal";
 $jawal="Admin || INV Admin";
 switch($modul){

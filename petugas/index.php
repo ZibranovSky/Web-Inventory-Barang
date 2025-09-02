@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once "sesi_petugas.php";
+include("sesi_petugas.php");
 $modul=(isset($_GET['m']))?$_GET['m']:"awal";
 $jawal="Petugas || INV Petugas";
 switch($modul){
