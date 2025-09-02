@@ -54,5 +54,6 @@ Website inventory adalah aplikasi berbasis Web untuk mengatur dan mencatat kelua
 -> Catatan(PENTING) :
     <i>Sebelum mengimport database, pastikan anda membuat database sesuai dengan nama database yang ada di dalam folder DATABASE, yaitu 'inventory'</i>
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
+<b>Jika ada yang ingin di tanyakan bisa hubungi nomor berikut via wa : 0895-3301-31416</b>
 
 <strong> Harap Jangan mengubah copyright yang ada di footer website</strong>
